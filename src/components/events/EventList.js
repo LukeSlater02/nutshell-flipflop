@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./EventList.css"
 import { getAllEvents } from "../../modules/EventManager";
+import { useNavigate } from "react-router-dom";
 
 // GROUP: display a list of all the events from the database
 
 export const EventList = () => {
 
     const [events, setEvents] = useState([])
+
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         getAllEvents().then(setEvents)
@@ -22,13 +26,17 @@ export const EventList = () => {
                 <div className="list__content">
                     {events.map(e => (
                         <>
-                            <span className="list__item__name">{e.name}</span> <span className="list__item__date">{e.date}</span> <span className="list__item">{e.location}</span>
+                            <span key={e.id} className="list__item__name">{e.name}</span> <span className="list__item__date">{e.date}</span> <span className="list__item">{e.location}</span>
                         </>
                     ))}
                 </div>
             </div>
 
-            <button className="add__button">Add New Event</button>
+            <button type="button"
+                className="add__button"
+                onClick={() => {navigate("/events/create")}}>
+                    Create New Event
+                </button>
         </>
     )
 }
