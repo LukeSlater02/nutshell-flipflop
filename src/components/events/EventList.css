@@ -1,0 +1,84 @@
+.content__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75vw;
+    min-width: 50%;
+    margin: auto;
+    margin-top: 8%;
+    border: 10px black;
+    border-radius: 5px;
+    min-height: 400px;
+    background-color:  #031424;
+    font-size: 22px;
+}
+
+.list__fields {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 99%;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: .5em;
+    padding-bottom: .3em;
+    border-bottom: 6px #30415d solid;
+}
+
+.list__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__item {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5em;
+    padding-bottom: .3em;
+    border-bottom: 3px #30415d solid;
+}
+
+.list__item__name {
+    width: 37%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5em;
+    border-bottom: 3px #30415d solid;
+    padding-bottom: .3em;
+}
+
+.list__item__date {
+    width: 29%;
+    display: flex;
+    padding-bottom: .3em;
+    justify-content: center;
+    margin-bottom: .5em;
+    border-bottom: 3px #30415d solid;
+}
+
+.list__header {
+    font-size: 40px;
+}
+
+.add__button {
+    margin: 50px auto;
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: 3px solid white;
+    color: white;
+    border-radius: 5px;
+    background-color: crimson;
+    font-weight: bold;
+    font-size: large;
+    transition: background-color 1s, color 1s
+}
+
+.add__button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer
+}
