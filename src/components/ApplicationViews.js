@@ -7,7 +7,6 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   const PrivateOutlet = () => {
 		return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
 	}
-  
   return (
     <>
     <Routes>

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export const Login = ({setAuthUser}) => {
-	const [loginUser, setLoginUser] = useState({ email: "" });
+	const [loginUser, setLoginUser ] = useState({ email: "" });
 	const [existDialog, setExistDialog] = useState(false);
 
 	const navigate = useNavigate();
