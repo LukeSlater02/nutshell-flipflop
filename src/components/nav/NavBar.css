@@ -1,1 +1,33 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+    padding: 1em;
+}
 
+.nav_link {
+    color: #031424;
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    color: white;
+    font-size: larger;
+}
+
+.navBar_item {
+   flex-basis: 30%;
+   list-style-type: none;
+   display: flex;
+   justify-content: center;
+   font-size: larger;
+}
+
+.item_left {
+    border-left: 3px #031424 solid;
+}
+
+.navbar__link :active{
+    color: white;
+}

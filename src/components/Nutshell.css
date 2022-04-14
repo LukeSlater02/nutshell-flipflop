@@ -1,3 +1,9 @@
 strong {
   font-weight: bold;
 }
+
+body {
+    background-color: crimson; 
+    /* #FF8576 */
+  color:  white;
+}
