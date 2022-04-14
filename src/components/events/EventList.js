@@ -13,18 +13,22 @@ export const EventList = () => {
     }, [])
 
     return (
-        <div className="content__list">
-            <h2 className="list__header">Event List</h2>
-            <div className="list__fields">
-                <span className="list__field">Name</span> <span className="list__field">Date</span> <span className="list__field">City</span>
-            </div>
-            <div className="list__content">
-                {events.map(e => (
-                    <>
-                    <span className="list__item__name">{e.name}</span> <span className="list__item__date">{e.date}</span> <span className="list__item">{e.location}</span>
-                    </>
-                ))}            
+        <>
+            <div className="content__list">
+                <h2 className="list__header">Event List</h2>
+                <div className="list__fields">
+                    <span className="list__field">Name</span> <span className="list__field">Date</span> <span className="list__field">City</span>
                 </div>
-        </div>
+                <div className="list__content">
+                    {events.map(e => (
+                        <>
+                            <span className="list__item__name">{e.name}</span> <span className="list__item__date">{e.date}</span> <span className="list__item">{e.location}</span>
+                        </>
+                    ))}
+                </div>
+            </div>
+
+            <button className="add__button">Add New Event</button>
+        </>
     )
 }
