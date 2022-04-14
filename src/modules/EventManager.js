@@ -4,22 +4,22 @@ export const getAllEvents = () => {
     return fetch(`${remoteURL}/events`).then(res => res.json())
 }
 
-export const getEventsById = (id) => {
+export const getEventById = (id) => {
     return fetch(`${remoteURL}/events/${id}`).then(res => res.json())
 }
 
-export const deleteEvents = id => {
+export const deleteEvent = id => {
     return fetch(`${remoteURL}/events/${id}`, {
         method: "DELETE"
     }).then(res => res.json())
 }
 
-export const addEvents = newEvents => {
+export const addEvent = newEvent => {
     return fetch(`${remoteURL}/events`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(newEvents)
+      body: JSON.stringify(newEvent)
     }).then(res => res.json())
   }
