@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./EventList.css"
 import { getAllEvents } from "../../modules/EventManager";
 
+// GROUP: display a list of all the events from the database
+
 export const EventList = () => {
 
     const [events, setEvents] = useState([])
