@@ -3,6 +3,10 @@ import { ApplicationViews } from "./ApplicationViews"
 import { NavBar } from "./nav/NavBar"
 import "./Nutshell.css"
 
+//set state for IsAuthenticated. check for nutshell user logged in.
+// do it in paren there so it can be passed to AppViews and Navbar. 
+//this component renders the page. 
+
 export const Nutshell = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("nutshell_user") !== null)
 
@@ -24,3 +28,5 @@ return (
                 setIsAuthenticated={setIsAuthenticated}/>
   </>
 )}
+
+//setIsAuthenticated being passed to children.... can still use it, just can't change it. 

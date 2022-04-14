@@ -2,12 +2,12 @@ import React from "react"
 import { Routes, Route, Outlet, Navigate } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
+import { EventList } from "./events/EventList"
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   const PrivateOutlet = () => {
 		return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
 	}
-  
   return (
     <>
     <Routes>
@@ -15,7 +15,7 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         <Route path="/friends" element={""} />
         <Route path="/messages" element={""} />
         <Route path="/tasks" element={""} />
-        <Route path="/events" element={""} />
+        <Route path="/events" element={<EventList />} />
       </Route>
 
       <Route path="/login" element={<Login setAuthUser={setAuthUser}/>}/>
