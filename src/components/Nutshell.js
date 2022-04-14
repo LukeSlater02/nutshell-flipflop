@@ -30,3 +30,4 @@ return (
 )}
 
 //setIsAuthenticated being passed to children.... can still use it, just can't change it. 
+
