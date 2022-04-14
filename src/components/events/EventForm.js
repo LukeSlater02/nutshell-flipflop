@@ -55,7 +55,7 @@ export const EventForm = () => {
                 <fieldset className="event__fields">
                     <div>
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required className="form-control" placeholder="event name" value={event.name}/>
+                        <input type="text" id="name" onChange={handleControlledInputChange} required className="form-control name" placeholder="event name" value={event.name}/>
                     </div>
                 </fieldset>
 
@@ -63,7 +63,7 @@ export const EventForm = () => {
                 <fieldset className="event__fields">
                     <div>
                         <label htmlFor="location">Location:</label>
-                        <input type="text" id="location" onChange={handleControlledInputChange} required className="form-control" placeholder="event location" value={event.location}/>
+                        <input type="text" id="location" onChange={handleControlledInputChange} required className="form-control location" placeholder="event location" value={event.location}/>
                     </div>
                 </fieldset>
 
