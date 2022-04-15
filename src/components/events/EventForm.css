@@ -11,7 +11,7 @@
     min-height: 400px;
     background-color:  #031424;
     font-size: 22px;
-
+    font-family: 'Prata'
 }
 
 .task__fields {
@@ -19,7 +19,7 @@
     flex-direction: row nowrap;
     justify-content: left;
     align-items: center;
-    width: 92%;
+    width: 96%;
     font-size: larger;
     font-weight: bold;
     margin-bottom: .5em;
@@ -28,11 +28,33 @@
     box-shadow: 3px 3px 3px 3px black;
     background-color: #30415d;
     /* border-bottom: 6px #30415d solid; */
+    
+}
+
+@font-face {
+    font-family: 'Prata';
+    src: url('https://fonts.googleapis.com/css2?family=Fredoka&family=Libre+Baskerville:wght@700&family=Open+Sans&display=swap') format('woff2');
+  }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Prata'
 }
 
 .task__fields ::placeholder {
     color: white;
     font-style: italic;
+}
+
+.name {
+    margin-left: 3em;
+}
+
+.location {
+    margin-left: .6em;
 }
 
 input[type=text]{
@@ -42,8 +64,9 @@ input[type=text]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    padding:.3em;
+    padding:.5em;
     box-shadow: 3px 3px 3px 3px black;
+    border-radius: 3px;
 }
 
 input[type=date]{
@@ -53,9 +76,12 @@ input[type=date]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    padding:.3em;
+    margin-left: 4em;
+    width: 12.6em;
+    padding:.5em;
     font-style: italic;
     box-shadow: 3px 3px 3px 3px black;
+    border-radius: 3px;
 }
 
 .task__header {

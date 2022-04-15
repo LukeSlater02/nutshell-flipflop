@@ -4,6 +4,8 @@ import "./NavBar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMessage, faUserGroup, faHouse, faClipboardCheck, faCalendarDays, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
+
+
 export const NavBar = ({clearUser}) => {
   return (
     <nav>
@@ -24,7 +26,7 @@ export const NavBar = ({clearUser}) => {
           <Link className="nav_link" to="/events"> <FontAwesomeIcon icon={faCalendarDays} /> Events</Link>
         </li>
         <li className="navBar_item item_left">
-          <Link className="nav_link" to="/login" onClick={clearUser}> <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout</Link>
+        {sessionStorage.getItem("nutshell_user") != null ? <Link className="nav_link" to="/login" onClick={clearUser}> <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout</Link> : ''}
         </li>
       </ul>
     </nav>
