@@ -38,10 +38,10 @@ export const EventForm = () => {
             window.alert("Fill Complete Each Field")
         }
     }
-
-
+  
     return (
         <>
+            {console.log(sessionStorage.getItem("nutshell_user"))}
             <form className="event__form">
                 <h2 className="event__header">Create New Event</h2>
 
