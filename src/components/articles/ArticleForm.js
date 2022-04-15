@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addArticle } from "../../modules/ArticleManager";
 import "./ArticleForm.css"
+import { useNavigate } from "react-router-dom";
 // LUKE: accepts inputs from text field for url, title & synopsis. auto calculates date/time with AM/PM, gets userId from sessionsStorage
 
 
@@ -17,8 +18,10 @@ export const ArticleForm = () => {
 
     const [isLoading, setIsLoading] = useState(false)
 
+    let navigate = useNavigate()
+
     const handleControlledInputChange = (event) => {
-        let newArticle = [...article]
+        let newArticle = { ...article }
         let newVal = event.target.value
 
         newArticle[event.target.id] = newVal
@@ -35,9 +38,14 @@ export const ArticleForm = () => {
 
         if (article.url === "" || article.title === "" || article.synopsis === "") {
             window.alert("Please complete all fields.")
+        } else {
+
+            addArticle(article).then(() => {
+                setIsLoading(false)
+                navigate('/articles')
+            })
         }
 
-        addArticle(article).then(() => setIsLoading(false))
     }
 
     return (
