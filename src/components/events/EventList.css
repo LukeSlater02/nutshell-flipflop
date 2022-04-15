@@ -11,6 +11,7 @@
     min-height: 400px;
     background-color:  #031424;
     font-size: 22px;
+    box-shadow: 5px 5px 5px 5px black;
 }
 
 .list__fields {
