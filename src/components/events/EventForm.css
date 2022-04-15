@@ -11,7 +11,6 @@
     min-height: 400px;
     background-color:  #031424;
     font-size: 22px;
-    font-family: 'Prata'
 }
 
 .event__fields {
@@ -25,19 +24,6 @@
     margin-bottom: .5em;
     box-shadow: 3px 3px 3px 3px black;
     background-color: #30415d;
-}
-
-@font-face {
-    font-family: 'Prata';
-    src: url('https://fonts.googleapis.com/css2?family=Fredoka&family=Libre+Baskerville:wght@700&family=Open+Sans&display=swap') format('woff2');
-  }
-
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Prata'
 }
 
 .event_fields ::placeholder {
