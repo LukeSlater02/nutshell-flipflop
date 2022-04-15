@@ -7,6 +7,7 @@ import { EventForm } from "./events/EventForm"
 import { TaskList } from "./tasks/TaskList"
 import { TaskEditForm } from "./tasks/TaskEditForm";
 import { TaskForm } from "./tasks/TaskForm"
+import { FriendList } from "./friends/FriendsList"
 import { ArticleList } from "./articles/ArticleList"
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
@@ -17,7 +18,7 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
     <>
     <Routes>
       <Route path="/" element={<PrivateOutlet/>} >
-        <Route path="/friends" element={""} />
+        <Route path="/friends" element={<FriendList />} />
         <Route path="/messages" element={""} />
         <Route path="/tasks" element={<TaskList />} />
         <Route path="/tasks/create" element={<TaskForm />} />
