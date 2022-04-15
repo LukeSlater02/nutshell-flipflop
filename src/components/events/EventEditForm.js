@@ -5,7 +5,7 @@ import "./EventEditForm.css"
 
 
 export const EventEditForm = () => {
-    const [event, setEvent] = useState({ name: "", date: "", city: "" });
+    const [event, setEvent] = useState({ name: "", date: "", location: "" });
     const [isLoading, setIsLoading] = useState(false);
   
     const {eventId} = useParams();
@@ -80,7 +80,7 @@ export const EventEditForm = () => {
 				    type="button" 
 				    className="cancel__event__button"
 				    disabled={isLoading}
-				    onClick={navigate("/events")}>
+				    onClick={()=>navigate("/events")}>
 				    Cancel
                 </button>
 
