@@ -20,6 +20,11 @@ export const TaskList = () => {
     const navigate = useNavigate();
 
 
+    const handleEditTask = id => {
+        navigate(`/tasks/${id}/edit`)
+        .then(() => getAllTasks().then(setTasks));
+    };
+
     useEffect(() => {
         getAllTasks().then(setTasks)
     },[])
@@ -27,14 +32,25 @@ export const TaskList = () => {
     return(
         <>
             <div className ="content__list">
-                <h2 className="list__header">Get Errrr Dooonnnneeeeeee!!!!!</h2>
+                <h2 className="list__header">Tasks</h2>
                 <div className="list__fields">
-                    <span className="list__field">Task</span> <span className="list__field">Deadline</span> <span className="list__field">Completion?</span>
+                    <span className="list__field">Task</span> 
+                    <span className="list__field">Deadline</span> 
+                    <span className="list__field">Completion</span>
                 </div>
                 <div className="list__content">
                     {tasks.map(t => (
                         <>
-                            <span key={t.id} className="list__item__name">{t.name}</span> <span className="list__item__date">{t.date}</span> <span className="list__item">{t.isCompleted ? 'Yes' : 'No'}</span>
+                            <span key={t.id} className="list__item__name">{t.name}</span>
+                            <span className="list__item__date">{t.date}</span> 
+                            <span className="list__item">{t.isCompleted ? 'Yes' : 'No'}</span>
+
+                            <button type="button"
+                            className="ad__button"
+                            onClick={() => handleEditTask(t.id)}>
+                                Edit Task
+                            </button>
+
                         </>
                     ))}
                 </div>
@@ -45,6 +61,7 @@ export const TaskList = () => {
             onClick={() => {navigate("/tasks/create")}}>
                 Create New Task
             </button>
+
         </>
     )
 }

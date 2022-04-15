@@ -108,3 +108,92 @@ input[type=date]{
     cursor: pointer
 }
 
+
+
+
+
+
+.event__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35vw;
+    min-width: 25%;
+    margin: auto;
+    margin-top: 8%;
+    border: 10px black;
+    border-radius: 5px;
+    min-height: 400px;
+    background-color:  #031424;
+    font-size: 22px;
+
+}
+
+.event__fields {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: left;
+    align-items: center;
+    width: 92%;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: .5em;
+    padding-bottom: .3em;
+    border: none;
+    box-shadow: 3px 3px 3px 3px black;
+    background-color: #30415d;
+    /* border-bottom: 6px #30415d solid; */
+}
+
+.event__fields ::placeholder {
+    color: white;
+    font-style: italic;
+}
+
+input[type=text]{
+    resize: vertical;
+    background-color: #031424;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    margin-bottom: .5em;
+    padding:.3em;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+input[type=date]{
+    resize: vertical;
+    background-color: #031424;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    margin-bottom: .5em;
+    padding:.3em;
+    font-style: italic;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.event__header {
+    font-size: 40px;
+}
+
+.submit__event__button {
+    margin: 50px auto;
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: 3px solid white;
+    color: white;
+    border-radius: 5px;
+    background-color: crimson;
+    font-weight: bold;
+    font-size: large;
+    transition: background-color 1s, color 1s
+}
+
+.submit__event__button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer
+}
+
