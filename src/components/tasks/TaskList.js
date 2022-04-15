@@ -20,10 +20,7 @@ export const TaskList = () => {
     const navigate = useNavigate();
 
 
-    const handleEditTask = id => {
-        navigate(`/tasks/${id}/edit`)
-        .then(() => getAllTasks().then(setTasks));
-    };
+  
 
     useEffect(() => {
         getAllTasks().then(setTasks)
@@ -40,18 +37,19 @@ export const TaskList = () => {
                 </div>
                 <div className="list__content">
                     {tasks.map(t => (
-                        <>
-                            <span key={t.id} className="list__item__name">{t.name}</span>
+                         
+                        <span key={t.id}>
+                            <span className="list__item__name">{t.name}</span>
                             <span className="list__item__date">{t.date}</span> 
                             <span className="list__item">{t.isCompleted ? 'Yes' : 'No'}</span>
 
                             <button type="button"
                             className="ad__button"
-                            onClick={() => handleEditTask(t.id)}>
+                            onClick={()=>navigate(`/tasks/${t.id}/edit`)}>
                                 Edit Task
                             </button>
-
-                        </>
+                            </span>
+                        
                     ))}
                 </div>
             </div>

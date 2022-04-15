@@ -72,7 +72,7 @@ export const TaskEditForm = () => {
 				    type="button" 
 				    className="cancel__task__button"
 				    disabled={isLoading}
-				    onClick={navigate("/tasks")}>
+				    onClick={()=>navigate("/tasks")}>
 				    Cancel
                 </button>
 
