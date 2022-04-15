@@ -23,3 +23,13 @@ export const addEvent = newEvent => {
       body: JSON.stringify(newEvent)
     }).then(res => res.json())
   }
+
+  export const updateEvent  = (editedEvent) => {
+    return fetch(`${remoteURL}/events/${editedEvent.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedEvent)
+    }).then(data => data.json());
+  }
