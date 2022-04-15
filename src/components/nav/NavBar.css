@@ -32,3 +32,21 @@
 .navbar__link :active{
     color: white;
 }
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+a:active{
+    color:  white;
+}
+.navBar_item>.active{
+    color: white;
+    ;
+}
+
+.nav_link>.logout{
+    color: black;
+}
