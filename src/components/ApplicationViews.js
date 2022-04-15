@@ -6,6 +6,7 @@ import { EventList } from "./events/EventList"
 import { EventForm } from "./events/EventForm"
 import { TaskList } from "./tasks/TaskList"
 import { TaskForm } from "./tasks/TaskForm"
+import { ArticleList } from "./articles/ArticleList"
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   const PrivateOutlet = () => {
@@ -21,6 +22,7 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         <Route path="/tasks/create" element={<TaskForm />} />
         <Route path="/events" element={<EventList />} />
         <Route path="/events/create" element={<EventForm />} />
+        <Route path="/articles" element={<ArticleList />} />
       </Route>
 
       <Route path="/login" element={<Login setAuthUser={setAuthUser}/>}/>
