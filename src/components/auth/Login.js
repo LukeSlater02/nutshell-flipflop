@@ -49,9 +49,9 @@ export const Login = ({setAuthUser}) => {
 			<section>
 				<form className="form--login" onSubmit={handleLogin}>
 					<h1>Nutshell</h1>
-					<h2>Please sign in</h2>
+					<h2>Sign In</h2>
 					<fieldset>
-						<label htmlFor="inputEmail"> Email address </label>
+						<label htmlFor="inputEmail"> Email Address</label>
 						<input
 							type="email"
 							id="email"
