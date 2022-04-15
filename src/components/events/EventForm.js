@@ -35,7 +35,7 @@ export const EventForm = () => {
             addEvent(event)
             .then(() => navigate('/events'))
         } else {
-            window.alert("Fill Complete Each Field")
+            window.alert("Complete Each Field")
         }
     }
 
