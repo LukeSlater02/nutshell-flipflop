@@ -4,6 +4,7 @@
     align-content: space-around;
     align-items: center;
     padding: 1em;
+    transition: color .5s;
 }
 
 .nav_link {
