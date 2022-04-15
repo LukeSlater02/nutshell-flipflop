@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { addTasks, getAllTasks } from "../../modules/TaskManager";
+import { addTask, getAllTasks } from "../../modules/TaskManager";
 import "./TaskForm.css"
 
 /*
@@ -39,7 +39,7 @@ export const TaskForm = () => {
 
         if(task.name !== "" && task.date !== "" && task.isCompleted !== "") {
             setIsLoading(true);
-            addTasks(task)
+            addTask(task)
             .then(() => navigate('/tasks'))
         } else {
                 window.alert("Complete Each Field")
