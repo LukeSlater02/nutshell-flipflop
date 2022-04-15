@@ -7,12 +7,20 @@
     transition: color .5s;
 }
 
-.nav_link {
-    color: #031424;
+.navbar_link {
+    color: white;
     text-decoration: none;
 }
 
-.nav_link:hover {
+.link--register a {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar_link:hover {
     color: white;
     transform: scale(1.3);
 }
@@ -33,20 +41,7 @@
     color: white;
 }
 
-a{
-    text-decoration: none;
-}
-a:visited{
-    color: black;
-}
-a:active{
-    color:  white;
-}
-.navBar_item>.active{
-    color: white;
-    ;
-}
 
-.nav_link>.logout{
+.navbar__link {
     color: black;
 }

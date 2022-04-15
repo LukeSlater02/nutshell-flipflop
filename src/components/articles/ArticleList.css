@@ -18,6 +18,7 @@
 }
 .article__instance a {
     color: white;
+    text-decoration: underline;
 }
 
 .list__item {
