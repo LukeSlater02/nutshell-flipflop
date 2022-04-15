@@ -27,16 +27,18 @@ export const EventList = () => {
                 </div>
                 <div className="list__content">
                     {events.map(e => (
-                        <>
-                            <span key={e.id} className="list__item__name">{e.name}</span>
-                             <span key={e.date} className="list__item__date">{e.date}</span>
-                              <span key={e.location} className="list__item">{e.location}</span>
+
+                        <span key={e.id}>
+                            <span className="list__item__name">{e.name}</span>
+                             <span className="list__item__date">{e.date}</span>
+                              <span className="list__item">{e.location}</span>
+
                                <button type="button" 
                                 className="add__button" 
                                 onClick={() => 
                                 {navigate(`/events/${e.id}/edit`)}}>Edit Event
                                </button>
-                        </>
+                        </span>
                     ))}
                 </div>
             </div>

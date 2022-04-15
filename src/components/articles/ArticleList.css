@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Prata';
-    src: url('https://fonts.googleapis.com/css2?family=Fredoka&family=Libre+Baskerville:wght@700&family=Open+Sans&display=swap') format('woff2');
-  }
-
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Prata'
-}
-
 .content__list {
     display: flex;
     flex-direction: column;
