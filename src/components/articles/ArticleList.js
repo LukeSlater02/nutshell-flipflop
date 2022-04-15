@@ -23,7 +23,7 @@ export const ArticleList = () => {
                 <div className="list__content">
                     {articles.map(a => (
                         <div key={a.id} className="article__instance">
-                            <a href={a.url} className="list__item">{a.title}</a>
+                            <a target='_blank' href={a.url} className="list__item">{a.title}</a>
                             <span className="list__item">{a.synopsis}</span>
                         </div>
                     ))}

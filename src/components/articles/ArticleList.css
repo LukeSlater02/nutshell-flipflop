@@ -19,6 +19,17 @@
 .article__instance a {
     color: white;
     text-decoration: underline;
+    transition: color 1s;
+}
+
+.article__instance a:visited{
+    color: darkgray;
+}
+
+.article__instance a:hover {
+    color:crimson;
+    transform: none;
+
 }
 
 .list__item {

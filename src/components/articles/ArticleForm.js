@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { addArticle } from "../../modules/ArticleManager";
+import "./ArticleForm.css"
 // LUKE: accepts inputs from text field for url, title & synopsis. auto calculates date/time with AM/PM, gets userId from sessionsStorage
 
 
@@ -15,13 +16,6 @@ export const ArticleForm = () => {
     )
 
     const [isLoading, setIsLoading] = useState(false)
-
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-
-    c = mm + '/' + dd + '/' + yyyy;
 
     const handleControlledInputChange = (event) => {
         let newArticle = [...article]
@@ -61,7 +55,7 @@ export const ArticleForm = () => {
                 <fieldset className="article__fields">
                     <div>
                         <label htmlFor="title">Title:</label>
-                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control name" placeholder="article title" value={event.title} />
+                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control name" placeholder="article title" value={article.title} />
                     </div>
                 </fieldset>
 
