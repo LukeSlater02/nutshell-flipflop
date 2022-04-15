@@ -1,9 +1,9 @@
-.task__form {
+.content__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35vw;
-    min-width: 25%;
+    width: 75vw;
+    min-width: 50%;
     margin: auto;
     margin-top: 8%;
     border: 10px black;
@@ -11,58 +11,59 @@
     min-height: 400px;
     background-color:  #031424;
     font-size: 22px;
-
 }
 
-.task__fields {
+.list__fields {
     display: flex;
     flex-direction: row nowrap;
-    justify-content: left;
+    justify-content: space-around;
     align-items: center;
-    width: 92%;
+    width: 99%;
     font-size: larger;
     font-weight: bold;
     margin-bottom: .5em;
     padding-bottom: .3em;
-    border: none;
-    box-shadow: 3px 3px 3px 3px black;
-    background-color: #30415d;
-    /* border-bottom: 6px #30415d solid; */
+    border-bottom: 6px #30415d solid;
 }
 
-.task__fields ::placeholder {
-    color: white;
-    font-style: italic;
+.list__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-input[type=text]{
-    resize: vertical;
-    background-color: #031424;
-    border: none;
-    color: rgba(255, 255, 255, 1);
-    outline: none;
+.list__item {
+    width: 33%;
+    display: flex;
+    justify-content: center;
     margin-bottom: .5em;
-    padding:.3em;
-    box-shadow: 3px 3px 3px 3px black;
+    padding-bottom: .3em;
+    border-bottom: 3px #30415d solid;
 }
 
-input[type=date]{
-    resize: vertical;
-    background-color: #031424;
-    border: none;
-    color: rgba(255, 255, 255, 1);
-    outline: none;
+.list__item__name {
+    width: 37%;
+    display: flex;
+    justify-content: center;
     margin-bottom: .5em;
-    padding:.3em;
-    font-style: italic;
-    box-shadow: 3px 3px 3px 3px black;
+    border-bottom: 3px #30415d solid;
+    padding-bottom: .3em;
 }
 
-.task__header {
+.list__item__date {
+    width: 29%;
+    display: flex;
+    padding-bottom: .3em;
+    justify-content: center;
+    margin-bottom: .5em;
+    border-bottom: 3px #30415d solid;
+}
+
+.list__header {
     font-size: 40px;
 }
 
-.submit__task__button {
+.add__button {
     margin: 50px auto;
     display: block;
     width: 180px;
@@ -76,9 +77,8 @@ input[type=date]{
     transition: background-color 1s, color 1s
 }
 
-.submit__task__button:hover{
+.add__button:hover{
     background-color: white;
     color: black;
     cursor: pointer
 }
-

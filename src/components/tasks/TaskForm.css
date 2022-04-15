@@ -1,4 +1,4 @@
-.task__form {
+.event__form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
 
 }
 
-.task__fields {
+.event__fields {
     display: flex;
     flex-direction: row nowrap;
     justify-content: left;
@@ -30,7 +30,7 @@
     /* border-bottom: 6px #30415d solid; */
 }
 
-.task__fields ::placeholder {
+.event__fields ::placeholder {
     color: white;
     font-style: italic;
 }
@@ -58,11 +58,11 @@ input[type=date]{
     box-shadow: 3px 3px 3px 3px black;
 }
 
-.task__header {
+.event__header {
     font-size: 40px;
 }
 
-.submit__task__button {
+.submit__event__button {
     margin: 50px auto;
     display: block;
     width: 180px;
@@ -76,7 +76,7 @@ input[type=date]{
     transition: background-color 1s, color 1s
 }
 
-.submit__task__button:hover{
+.submit__event__button:hover{
     background-color: white;
     color: black;
     cursor: pointer
