@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: .5em;
     border-bottom: 3px #30415d solid;
     padding-bottom: .3em;
-    padding-left: .5em;
+    padding-left: 1em;
 }
 
 .list__header {
