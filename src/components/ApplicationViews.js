@@ -5,9 +5,9 @@ import { Register } from "./auth/Register"
 import { EventList } from "./events/EventList"
 import { EventForm } from "./events/EventForm"
 import { TaskList } from "./tasks/TaskList"
+import { TaskEditForm } from "./tasks/TaskEditForm";
 import { TaskForm } from "./tasks/TaskForm"
-import { TaskEditForm } from "./tasks/TaskEditForm"
-import { EventEditForm } from "./events/EventEditForm"
+import { ArticleList } from "./articles/ArticleList"
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   const PrivateOutlet = () => {
@@ -24,7 +24,7 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         <Route path="/tasks/:taskId/edit" element={<TaskEditForm />} />
         <Route path="/events" element={<EventList />} />
         <Route path="/events/create" element={<EventForm />} />
-        <Route path="/events/:eventId/edit" element={<EventEditForm />} />
+        <Route path="/articles" element={<ArticleList />} />
       </Route>
 
       <Route path="/login" element={<Login setAuthUser={setAuthUser}/>}/>

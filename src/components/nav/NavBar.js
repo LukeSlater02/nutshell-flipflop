@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMessage, faUserGroup, faHouse, faClipboardCheck, faCalendarDays, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { faMessage, faUserGroup, faHouse, faClipboardCheck, faCalendarDays, faArrowRightFromBracket, faNewspaper } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -12,6 +12,9 @@ export const NavBar = ({clearUser}) => {
       <ul  className="navBar">
         <li className="navBar_item">
           <Link className="nav_link" to="/"> <FontAwesomeIcon icon={faHouse} /> Dashboard</Link>
+        </li>
+        <li className="navBar_item item_left">
+          <Link className="nav_link" to="/articles"> <FontAwesomeIcon icon={faNewspaper} /> Articles</Link>
         </li>
         <li className="navBar_item item_left">
           <Link className="nav_link" to="/friends"> <FontAwesomeIcon icon={faUserGroup} /> Friends</Link>
