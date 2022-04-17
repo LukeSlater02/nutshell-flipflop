@@ -33,3 +33,5 @@ export const addTask = newTasks => {
       body: JSON.stringify(editedTask)
     }).then(data => data.json());
   }
+
+ 
