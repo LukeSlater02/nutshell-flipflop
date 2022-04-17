@@ -1,39 +1,38 @@
-.content__list {
+.task__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75vw;
-    min-width: 50%;
-    margin: auto;
     margin-top: 8%;
     border: 10px black;
     border-radius: 5px;
+    background-color: rgb(246, 246, 246);
     min-height: 400px;
-    background-color:  #031424;
     font-size: 22px;
+    margin: 20px;
+    padding: 20px;
+  
+    color: black;
 }
 
 .list__fields {
-    display: flex;
-    flex-direction: row nowrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    width: 98%;
     font-size: larger;
     font-weight: bold;
     margin-bottom: .5em;
     padding-bottom: .3em;
     border-bottom: 6px #30415d solid;
+   
 }
+
 
 .list__content {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .list__item {
-    width: 33%;
     display: flex;
     justify-content: center;
     margin-bottom: .5em;
