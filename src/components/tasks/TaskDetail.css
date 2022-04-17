@@ -1,0 +1,31 @@
+.button-container{
+    grid-area: buttons;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.btnTask{
+    display: flex;
+    align-items: center;
+    border: none;
+    flex-grow: 1;
+    width:75px;
+    height:30px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    justify-content: center;
+    align-content: center;
+  
+
+}
+.btnDelete{
+    color: white;
+    background-color: crimson;
+}
+.btnEdit{
+    background-color: lightgray;
+}
