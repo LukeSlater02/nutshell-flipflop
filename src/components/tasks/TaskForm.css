@@ -6,11 +6,11 @@
     min-width: 25%;
     margin: auto;
     margin-top: 8%;
-    border: 10px black;
     border-radius: 5px;
     min-height: 400px;
     background-color:  #031424;
     font-size: 22px;
+    box-shadow: 5px 5px 5px 5px black;
 }
 
 .task__fields {
@@ -27,20 +27,16 @@
     box-shadow: 3px 3px 3px 3px black;
     background-color: #30415d;
     /* border-bottom: 6px #30415d solid; */
-    
+}
+
+label {
+    width: 240px;
+    display: contents
 }
 
 .task__fields ::placeholder {
     color: white;
     font-style: italic;
-}
-
-.name {
-    margin-left: 3em;
-}
-
-.location {
-    margin-left: .6em;
 }
 
 input[type=text]{
@@ -50,9 +46,9 @@ input[type=text]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    padding:.5em;
+    margin-left: 3em;
+    padding: 4em;
     box-shadow: 3px 3px 3px 3px black;
-    border-radius: 3px;
 }
 
 input[type=date]{
@@ -62,12 +58,10 @@ input[type=date]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    margin-left: 4em;
-    width: 12.6em;
-    padding:.5em;
+    margin-left: 1em;
+    padding:.3em;
     font-style: italic;
     box-shadow: 3px 3px 3px 3px black;
-    border-radius: 3px;
 }
 
 .task__header {
@@ -93,5 +87,3 @@ input[type=date]{
     color: black;
     cursor: pointer
 }
-
-

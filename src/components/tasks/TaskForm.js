@@ -60,7 +60,7 @@ export const TaskForm = () => {
 
                 <fieldset className="task__fields">
                     <div>
-                        <label htmlFor="date"></label>
+                        <label htmlFor="date">Deadline:</label>
                         <input type="date" id="date" onChange={handleControlledInputChange}required className="form-control" placeholder="task date" value={task.date}/>
                     </div>
                 </fieldset>

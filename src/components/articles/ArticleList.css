@@ -10,6 +10,7 @@
     border-radius: 5px;
     background-color:  #031424;
     font-size: 22px;
+    padding: 1em;
 }
 
 .article__instance {
@@ -64,4 +65,18 @@
     background-color: white;
     color: black;
     cursor: pointer
+}
+
+.list__header {
+    width: 98%;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding-top: .3em;
+    margin-top: .5em;
+    margin-bottom: .7em;
+    padding-bottom: 0.3em;
+    border: none;
+    box-shadow: 3px 3px 3px 3px black;
+    background-color: #30415d;
 }

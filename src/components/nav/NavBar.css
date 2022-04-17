@@ -17,7 +17,7 @@
 }
 
 .item_left {
-    border-left: 3px #031424 solid;
+    border-left: 3px black solid;
 }
 
 
@@ -30,7 +30,7 @@ a:visited{
     color: black;
 }
 
-a:hover{
+.navBar_item a:hover{
     color: white;
     transform: scale(1.3);
 }

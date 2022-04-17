@@ -11,6 +11,7 @@ import { TaskForm } from "./tasks/TaskForm"
 import { FriendList } from "./friends/FriendsList"
 import { ArticleList } from "./articles/ArticleList"
 import { TaskDetail } from "./tasks/TaskDetail"
+import {ArticleForm} from "./articles/ArticleForm"
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   const PrivateOutlet = () => {
