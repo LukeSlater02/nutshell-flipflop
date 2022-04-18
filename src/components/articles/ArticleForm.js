@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { addArticle } from "../../modules/ArticleManager";
+import "./ArticleForm.css"
+import { useNavigate } from "react-router-dom";
 // LUKE: accepts inputs from text field for url, title & synopsis. auto calculates date/time with AM/PM, gets userId from sessionsStorage
 
 
@@ -16,15 +18,10 @@ export const ArticleForm = () => {
 
     const [isLoading, setIsLoading] = useState(false)
 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-
-    c = mm + '/' + dd + '/' + yyyy;
+    let navigate = useNavigate()
 
     const handleControlledInputChange = (event) => {
-        let newArticle = [...article]
+        let newArticle = { ...article }
         let newVal = event.target.value
 
         newArticle[event.target.id] = newVal
@@ -41,9 +38,14 @@ export const ArticleForm = () => {
 
         if (article.url === "" || article.title === "" || article.synopsis === "") {
             window.alert("Please complete all fields.")
+        } else {
+
+            addArticle(article).then(() => {
+                setIsLoading(false)
+                navigate('/articles')
+            })
         }
 
-        addArticle(article).then(() => setIsLoading(false))
     }
 
     return (
@@ -61,7 +63,7 @@ export const ArticleForm = () => {
                 <fieldset className="article__fields">
                     <div>
                         <label htmlFor="title">Title:</label>
-                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control name" placeholder="article title" value={event.title} />
+                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control name" placeholder="article title" value={article.title} />
                     </div>
                 </fieldset>
 
