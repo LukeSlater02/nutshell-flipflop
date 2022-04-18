@@ -1,13 +1,13 @@
 //Andrew Cheatham 
-//Sets up the component friends list.
-//Created function getFriends() which fetches and returns allFriends from the JSON
 
 import react, { useEffect, useState } from "react";
 import { FriendCard } from "./FriendCard";
 import { getAllFriends, deleteFriend } from "../../modules/FriendManager";
+import "./FriendsList.css"
 
 export const FriendList = () => {
     const [friends, setFriends] = useState([])
+    
     const currentUser = sessionStorage.getItem("nutshell_user")
     console.log(currentUser)
 
@@ -18,8 +18,9 @@ export const FriendList = () => {
     }
 
     const handleDeleteFriend = id => {
+        //calls the function deleteFriend on the currently selected friendId and then sets the new state of friends
         deleteFriend(id)
-        .then(() => getAllFriends().then(setFriends))
+        .then(() => getAllFriends(currentUser).then(setFriends))
     }
 
     useEffect(() => {
@@ -27,6 +28,7 @@ export const FriendList = () => {
     }, [])
 
     return (
+        //takes all of the data/"friends" returned from getAllFriends and maps them to individual FriendCards
         <div className="container-cards">
             {friends.map(friend => <FriendCard
                 friend={friend}
