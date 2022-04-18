@@ -1,0 +1,20 @@
+footer {
+    background-color: #080808;
+    margin-top: auto;
+    display: flex;
+    height: 5em;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 4px 4px 4px black;
+    font-weight: bold;
+}
+
+footer img {
+    height: 90%;
+}
+
+.team {
+    border: 2px #080808 solid;
+    border-radius: 15px;
+}
