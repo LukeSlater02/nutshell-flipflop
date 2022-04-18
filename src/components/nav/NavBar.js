@@ -11,7 +11,7 @@ export const NavBar = ({clearUser}) => {
     <nav>
       <ul className="navBar">
         <li className="navBar_item">
-          <Link className={`navbar_link ${location.pathname === '/' ? 'active':''}`} to="/"> <FontAwesomeIcon icon={faHouse} /> Dashboard</Link>
+          <Link className={`navbar__link ${location.pathname === '/' ? 'active':''}`} to="/"> <FontAwesomeIcon icon={faHouse} /> Dashboard</Link>
         </li>
         <li className="navBar_item item_left">
           <Link className={`navbar__link ${location.pathname === '/articles' ? 'active':''}`} to="/articles"> <FontAwesomeIcon icon={faNewspaper} /> Articles</Link>
@@ -29,7 +29,7 @@ export const NavBar = ({clearUser}) => {
           <Link className={`navbar__link ${location.pathname === '/events' ? 'active':''}`} to="/events"> <FontAwesomeIcon icon={faCalendarDays} /> Events</Link>
         </li>
         <li className="navBar_item item_left">
-        {sessionStorage.getItem("nutshell_user") != null ? <Link className="nav_link" to="/login" onClick={clearUser}> <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout</Link> : ''}
+        {sessionStorage.getItem("nutshell_user") != null ? <Link className="navbar__link" to="/login" onClick={clearUser}> <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout</Link> : ''}
         </li>
       </ul>
     </nav>

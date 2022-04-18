@@ -14,8 +14,8 @@ export const TaskCard = ({ task, handleDeleteTask }) => {
         <span className="card-name">
           {task.name}
         </span>
-        <span className='card-date'>{task.deadline}</span>
-        <span className='card-status'>{task.isCompleted === false || 0 ? "No": "Yes"}</span>
+        <span className='card-date'>{task.date}</span>
+        <span className='card-status'>{task.isCompleted === false || 0 ? <span className='x'><FontAwesomeIcon icon={faXmark} /></span>: <span className='check'><FontAwesomeIcon icon={faCheck} /></span>}</span>
     
       </Link>
 
