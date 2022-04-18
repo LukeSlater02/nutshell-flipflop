@@ -64,6 +64,19 @@
     transition: background-color 1s, color 1s
 }
 
+.article__list__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 6px #30415d solid;
+    justify-items: center;
+    width: 100%;
+}
+
 .add__button:hover{
     background-color: white;
     color: black;
