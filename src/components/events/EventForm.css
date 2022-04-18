@@ -29,6 +29,11 @@
     /* border-bottom: 6px #30415d solid; */
 }
 
+label {
+    width: 240px;
+    display: contents
+}
+
 .event__fields ::placeholder {
     color: white;
     font-style: italic;
@@ -47,7 +52,7 @@ input[type=text]{
 
 input[type=date]{
     resize: vertical;
-    background-color: #031424;
+    background-color: black;
     border: none;
     color: rgba(255, 255, 255, 1);
     outline: none;
