@@ -1,6 +1,6 @@
 import React from 'react';
-import "./ArticleCard.css";
 import { Link } from "react-router-dom";
+import { ArticleCard } from "./ArticleCard.css"
 //Nathan
 export const ArticleCard = ({article, handleDeleteArticle}) => {
     return (
