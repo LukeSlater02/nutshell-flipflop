@@ -12,6 +12,8 @@ import { FriendList } from "./friends/FriendsList"
 import { ArticleList } from "./articles/ArticleList"
 import { TaskDetail } from "./tasks/TaskDetail"
 import { TaskCard } from "./tasks/TaskCard"
+import { EventCard } from "./events/EventCard"
+import { EventDetail } from "./events/EventDetail"
 
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
@@ -29,6 +31,7 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         <Route path="/tasks/create" element={<TaskForm />} />
         <Route path="/tasks/:taskId/edit" element={<TaskEditForm />} />
         <Route path="/events" element={<EventList />} />
+        <Route path="/events/:eventId" element={<EventDetail />} />
         <Route path="/events/:eventId/edit" element={<EventEditForm />}></Route>
         <Route path="/events/create" element={<EventForm />} />
         <Route path="/events/:eventId/edit" element={<EventEditForm />} />

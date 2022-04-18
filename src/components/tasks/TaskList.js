@@ -6,15 +6,6 @@ import { TaskCard } from "./TaskCard";
 
 // GROUP: display a list of all the tasks from the database
 
-/*
-      "id": 1,
-      "name": "style tasks",
-      "userId": 3,
-      "deadline": "2021-07-21",
-      "isCompleted": false,
-      "completeDate": 0
-*/ 
-
 export const TaskList = () => {
     const [tasks, setTasks] = useState([])
     
