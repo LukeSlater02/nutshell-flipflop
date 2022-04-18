@@ -31,11 +31,11 @@ export const TaskDetail = () => {
       <div className="task__deadline">Deadline: {task.deadline}</div>
       <div className="task__isCompleted">Completed: {task.isCompleted=== null ? "Not Completed" : task.isCompleted}</div>
       <div className="task__completeDate">Complete Date: {task.completeDate === null ? "Not Completed" : task.completeDate}</div>
-      <div className="task__detail">Details: {task.detail}</div>
+      <div className="task__detail">Details: {task.detail}</div><br />
       <button type="button" className="ad__button" onClick={()=>navigate(`/tasks/${task.id}/edit`)}>
       Edit
       </button>
-      <button type="button" disabled={isLoading} onClick={handleDelete}>
+      <button type="button"  onClick={()=>handleDelete(task.id)}>
       Delete
       </button>
     </section>

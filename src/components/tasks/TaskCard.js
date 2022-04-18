@@ -7,7 +7,7 @@ export const TaskCard = ({ task, handleDeleteTask }) => {
   return (
         <div className='card-content'>
 
-      <Link className="card-link" to={`/tasks/${task.id}`}>
+      <Link className="card-link" to={`/tasks/${task.id}` }>
        
         <span className="card-name">
           {task.name}
