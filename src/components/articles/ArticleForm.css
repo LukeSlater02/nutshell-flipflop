@@ -1,4 +1,4 @@
-.event__form {
+.article__form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,32 +6,37 @@
     min-width: 25%;
     margin: auto;
     margin-top: 8%;
+    border: 10px black;
     border-radius: 5px;
     min-height: 400px;
     background-color:  #031424;
     font-size: 22px;
-    box-shadow: 5px 5px 5px 5px black;
 }
 
-.event__fields {
+.article__fields {
     display: flex;
     flex-direction: row nowrap;
     justify-content: left;
     align-items: center;
-    width: 98%;
+    width: 96%;
     font-size: larger;
     font-weight: bold;
     margin-bottom: .5em;
-    padding-bottom: .3em;
-    border: none;
     box-shadow: 3px 3px 3px 3px black;
     background-color: #30415d;
-    /* border-bottom: 6px #30415d solid; */
 }
 
-.event__fields ::placeholder {
+.article__fields ::placeholder {
     color: white;
     font-style: italic;
+}
+
+.name {
+    margin-left: 3em;
+}
+
+.location {
+    margin-left: .6em;
 }
 
 input[type=text]{
@@ -41,8 +46,9 @@ input[type=text]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    padding:.3em;
+    padding:.5em;
     box-shadow: 3px 3px 3px 3px black;
+    border-radius: 3px;
 }
 
 input[type=date]{
@@ -52,16 +58,19 @@ input[type=date]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    padding:.3em;
+    margin-left: 4em;
+    width: 12.6em;
+    padding:.5em;
     font-style: italic;
     box-shadow: 3px 3px 3px 3px black;
+    border-radius: 3px;
 }
 
-.event__header {
+.article__header {
     font-size: 40px;
 }
 
-.submit__event__button {
+.submit__article__button {
     margin: 50px auto;
     display: block;
     width: 180px;
@@ -75,9 +84,8 @@ input[type=date]{
     transition: background-color 1s, color 1s
 }
 
-.submit__event__button:hover{
+.submit__article__button:hover{
     background-color: white;
     color: black;
     cursor: pointer
 }
-

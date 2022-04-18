@@ -1,21 +1,8 @@
-@font-face {
-    font-family: 'Prata';
-    src: url('https://fonts.googleapis.com/css2?family=Fredoka&family=Libre+Baskerville:wght@700&family=Open+Sans&display=swap') format('woff2');
-  }
-
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Prata'
-}
-
 .content__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75vw;
+    width: 50vw;
     min-width: 50%;
     margin: auto;
     margin-top: 5%;
@@ -25,57 +12,23 @@ h1, h2, h3, h4, h5 {
     font-size: 22px;
 }
 
-.list__fields {
+.article__instance {
     display: flex;
-    flex-direction: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 99%;
-    font-size: larger;
-    font-weight: bold;
-    margin-bottom: .3em;
-    padding-bottom: .3em;
-    font-family: 'Prata';
-    border-bottom: 6px #30415d solid;
+    flex-direction: row;
+}
+.article__instance a {
+    color: white;
 }
 
-.list__content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 300px;
-}
-
-
-
-.list__item__title {
-    width: 30%;
+.list__item {
+    width: 50%;
     display: flex;
     justify-content: center;
     margin-bottom: .5em;
     border-bottom: 3px #30415d solid;
     padding-bottom: .3em;
-    padding-left: .5em;
+    padding-left: 1em;
 }
-
-.list__item__synopsis {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: .3em;
-    margin-bottom: .5em;
-    border-bottom: 3px #30415d solid;
-}
-
-.list__item__url {
-    width: 39%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: .5em;
-    padding-bottom: .3em;
-    border-bottom: 3px #30415d solid;
-}
-
 
 .list__header {
     font-size: 40px;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./EventList.css"
-import { getAllEvents } from "../../modules/EventManager";
+import { getAllEvents, deleteEvent } from "../../modules/EventManager";
 import { useNavigate } from "react-router-dom";
 
 // GROUP: display a list of all the events from the database
@@ -11,6 +11,10 @@ export const EventList = () => {
 
     const navigate = useNavigate();
 
+    const handleDeleteEvent = id => {
+        deleteEvent(id)
+        .then(() => getAllEvents().then(setEvents));
+    };
 
     useEffect(() => {
         getAllEvents().then(setEvents)
@@ -27,16 +31,23 @@ export const EventList = () => {
                 </div>
                 <div className="list__content">
                     {events.map(e => (
-                        <>
-                            <span key={e.id} className="list__item__name">{e.name}</span>
+
+                        <span key={e.id}>
+                            <span className="list__item__name">{e.name}</span>
                              <span className="list__item__date">{e.date}</span>
                               <span className="list__item">{e.location}</span>
+
                                <button type="button" 
                                 className="add__button" 
                                 onClick={() => 
-                                {navigate(`/events/${e.id}/edit`)}}>Edit Event
+                                {navigate(`/events/${e.id}/edit`)}}>Edit
                                </button>
-                        </>
+                               <button type="button"
+                            className="ad__button"
+                            onClick={()=>handleDeleteEvent(e.id)}>
+                                Delete
+                            </button>
+                        </span>
                     ))}
                 </div>
             </div>
