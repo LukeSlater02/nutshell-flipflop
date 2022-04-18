@@ -22,12 +22,13 @@
 
 
 
-a{
+.navbar__link{
     text-decoration: none;
+    color: crimson;
 }
 
-a:visited{
-    color: black;
+.navbar__link:visited{
+    color: crimson;
 }
 
 .navBar_item a:hover{

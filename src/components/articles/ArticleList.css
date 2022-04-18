@@ -6,9 +6,11 @@
     min-width: 50%;
     margin: auto;
     margin-top: 5%;
-    border: 10px black;
-    border-radius: 5px;
-    background-color:  #031424;
+    border-radius: 10px;
+    border-left: 6px black solid;
+    border-right: 6px black solid;
+    box-shadow: 5px black;
+    background-color:  #30415d;
     font-size: 22px;
     padding: 1em;
 }
@@ -38,7 +40,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: .5em;
-    border-bottom: 3px #30415d solid;
+    border-bottom: 3px crimson solid;
     padding-bottom: .3em;
     padding-left: 1em;
 }
@@ -78,5 +80,5 @@
     padding-bottom: 0.3em;
     border: none;
     box-shadow: 3px 3px 3px 3px black;
-    background-color: #30415d;
+    background-color: crimson;
 }
