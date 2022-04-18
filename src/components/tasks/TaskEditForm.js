@@ -5,7 +5,7 @@ import "./TaskEditForm.css"
 
 
 export const TaskEditForm = () => {
-    const [task, setTask] = useState({ name: "", date: ""});
+    const [task, setTask] = useState({ name: "", date: "", deadline:"", isCompleted:"", completeDate:"", detail:"",});
     const [isLoading, setIsLoading] = useState(false);
   
     const {taskId} = useParams();
@@ -25,6 +25,10 @@ export const TaskEditForm = () => {
             id: taskId,
             name: task.name,
             date: task.date,
+            deadline: task.deadline,
+            detail: task.detail,
+            isCompleted: task.isCompleted,
+            completeDate: task.completeDate
             
           };
 
@@ -55,8 +59,34 @@ export const TaskEditForm = () => {
 
                 <fieldset className="task__edit__fields">
                     <div>
+                        <label htmlFor="deadline">Deadline:</label>
+                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control " placeholder="task deadline" value={task.deadline}/>
+                    </div>
+                </fieldset>
+
+                <fieldset className="task__edit__fields">
+                    <div>
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" onChange={handleFieldChange} required className="form-control name" placeholder="task name" value={task.name}/>
+                    </div>
+                </fieldset>
+                <fieldset className="task__edit__fields">
+                    <div>
+                        <label htmlFor="detail">Details:</label>
+                        <input type="text" id="detail" onChange={handleFieldChange} required className="form-control name" placeholder="task detail" value={task.detail}/>
+                    </div>
+                </fieldset>
+                <fieldset className="task__edit__fields">
+                    <div>
+                        <label htmlFor="isCompleted">Completed?:</label>
+                        <input type="text" id="isCompleted" onChange={handleFieldChange} required className="form-control name" placeholder="task isCompleted" value={task.isCompleted}/>
+                    </div>
+                </fieldset>
+
+                <fieldset className="task__edit__fields">
+                    <div>
+                        <label htmlFor="completeDate">Completion Date:</label>
+                        <input type="date" id="completeDate" onChange={handleFieldChange} required className="form-control" placeholder="task completeDate" value={task.completeDate}/>
                     </div>
                 </fieldset>
 

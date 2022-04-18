@@ -49,6 +49,7 @@
     margin-bottom: .5em;
     border-bottom: 3px #30415d solid;
     padding-bottom: .3em;
+    align-items: center;
 }
 
 .list__item__date {

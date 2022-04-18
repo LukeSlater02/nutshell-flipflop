@@ -9,15 +9,13 @@ export const TaskCard = ({ task, handleDeleteTask }) => {
   return (
         <div className='card-content'>
 
-      <Link className="card-link" to={`/tasks/${task.id}`}>
+      <Link className="card-link" to={`/tasks/${task.id}` }>
        
         <span className="card-name">
           {task.name}
         </span>
         <span className='card-date'>{task.date}</span>
-        <span className='card-status'>{task.isCompleted? <span className='check'><FontAwesomeIcon icon={faCheck}/></span>
-         : 
-         <span className='x'><FontAwesomeIcon icon={faXmark}/></span>}</span>
+        <span className='card-status'>{task.isCompleted === false || 0 ? "No": "Yes"}</span>
     
       </Link>
 

@@ -2,6 +2,9 @@ const remoteURL = "http://localhost:8088"
 
 export const getAllTasks = () => {
     return fetch(`${remoteURL}/tasks`).then(res => res.json())
+    .then((parsedResponse) => {
+      return parsedResponse.reverse();
+    });
 }
 
 export const getTaskById = (id) => {

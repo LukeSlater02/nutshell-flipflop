@@ -24,8 +24,8 @@ export const TaskList = () => {
 
     return(
         <>
-            <div className ="task__list" key={tasks.length}>
-                <h2 className="list__header">Task List</h2>
+            <div className ="task__list" key={tasks.length} >
+                <h2 className="list__header">Tasks</h2>
                 <div className="list__fields">
                     <span className="list__field taskHeader">Task</span> 
                     <span className="list__field deadlineHeader">Deadline</span> 
@@ -40,7 +40,7 @@ export const TaskList = () => {
                         <TaskCard
                         key={t.id}
                         task={t}
-                        handleDeleteTask={deleteTask} />
+                        handleDeleteTask={handleDeleteTask} />
                     
                    
 

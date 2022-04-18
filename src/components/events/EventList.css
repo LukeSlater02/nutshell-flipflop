@@ -25,11 +25,15 @@
     font-size: larger;
     font-weight: bold;
     border-bottom: 6px #30415d solid;
+    
+    
 }
 
 .list__content {
+    display:flex;
+    flex-direction: row;
     width: 100%;
-    display: flex;
+    
     flex-wrap: wrap;
 }
 

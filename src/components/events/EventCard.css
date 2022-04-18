@@ -29,11 +29,14 @@
 
 .card-name{
     grid-area: name;
+    color:white;
 
 }
 .card-date{
     grid-area: date;
+    color:white;
 }
 .card-status{
     grid-area: status;
+    color:white;
 }

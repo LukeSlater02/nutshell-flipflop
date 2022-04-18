@@ -3,12 +3,12 @@ import "./EventCard.css";
 import { Link } from "react-router-dom";
 
 
-export const EventCard = ({ event, handleDeleteEvent }) => {
+export const EventCard = ({ event }) => {
   
   return (
         <div className='card-content'>
 
-      <Link className="eventCard-link" to={`/events/${event.id}`}>
+      <Link className="card-link" to={`/events/${event.id}`}>
        
         <span className="card-name">
           {event.name}
