@@ -44,7 +44,6 @@ input[type=text]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    margin-left: 6.5em !important;
     padding:.3em;
     box-shadow: 3px 3px 3px 3px black;
 }
