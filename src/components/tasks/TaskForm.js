@@ -21,8 +21,8 @@ export const TaskForm = () => {
         date: '',
         deadline: '',
         detail: '',
-        isCompleted: '',
-        completeDate: ''
+        isCompleted: false ,
+        completeDate: 0
     })
 
     const [isLoading, setIsLoading] = useState(false)
@@ -81,19 +81,7 @@ export const TaskForm = () => {
                         <input type="text" id="detail" onChange={handleControlledInputChange} required className="form-control detail" placeholder="task detail" value={task.detail}/>
                     </div>
                 </fieldset>
-                <fieldset className="task__fields">
-                    <div>
-                        <label htmlFor="isCompleted">Completed?:</label>
-                        <input type="text" id="isCompleted" onChange={handleControlledInputChange} required className="form-control isCompleted" placeholder="task isCompleted" value={task.isCompleted}/>
-                    </div>
-                </fieldset>
-
-                <fieldset className="task__fields">
-                    <div>
-                        <label htmlFor="completeDate">Completion Date:</label>
-                        <input type="date" id="completeDate" onChange={handleControlledInputChange} required className="form-control completeDate" placeholder="task completeDate" value={task.completeDate}/>
-                    </div>
-                </fieldset>
+               
              
 
                 <button 

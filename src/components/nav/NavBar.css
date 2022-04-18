@@ -38,6 +38,7 @@
 
 .navBar_item>.active{
     color: white;
+    transition: 1.5;
     transform: scale(1.3);
     ;
 }
