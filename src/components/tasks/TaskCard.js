@@ -1,6 +1,8 @@
 import React from 'react';
 import "./TaskCard.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faXmark} from '@fortawesome/free-solid-svg-icons'
 
 
 export const TaskCard = ({ task, handleDeleteTask }) => {
