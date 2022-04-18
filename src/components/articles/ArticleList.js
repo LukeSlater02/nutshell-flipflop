@@ -18,7 +18,7 @@ export const ArticleList = () => {
         <div>
             <div className="article__list" key={articles.length}>
                 <h2 className="list__header">Article List</h2>
-                <div className="list__fields">
+                <div className="article__list__fields">
                     <span className="list__field__title">Title</span>
                         <span className="list__field__synopsis">Synopsis</span>
                 </div>

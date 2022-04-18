@@ -10,7 +10,7 @@ export const ArticleCard = ({article, handleDeleteArticle}) => {
     return (
         <div className="articleCard-content">
             <section className="articleCard-container">
-                <a href={article.url} className="card-title">{article.title}</a>
+                <a href={article.url} target="_blank" className="card-title">{article.title}</a>
                 <span className="card-synopsis">{article.synopsis}</span>
             </section>
         </div>

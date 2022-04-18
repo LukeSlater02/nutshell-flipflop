@@ -20,11 +20,10 @@
     border-left: 3px black solid;
 }
 
-
-
 .navbar__link{
     text-decoration: none;
     color: crimson;
+    transition: color 1s, scale 1s;
 }
 
 .navbar__link:visited{
