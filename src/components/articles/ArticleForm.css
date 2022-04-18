@@ -6,11 +6,13 @@
     min-width: 25%;
     margin: auto;
     margin-top: 8%;
-    border-radius: 5px;
+    border-radius: 10px;
+    border-left: 6px #080808 solid;
+    border-right: 6px #080808 solid;
+    box-shadow: 5px 5px 5px 5px #080808;
     min-height: 400px;
-    background-color:  #031424;
+    background-color:  #30415d;
     font-size: 22px;
-    box-shadow: 5px 5px 5px 5px black;
 }
 
 .article__fields {
@@ -25,8 +27,9 @@
     padding-bottom: .3em;
     border: none;
     box-shadow: 3px 3px 3px 3px black;
-    background-color: #30415d;
-    /* border-bottom: 6px #30415d solid; */
+    background-color: crimson;
+    border: 1px #080808 solid;
+    border-radius: 5px;
 }
 
 .article__fields ::placeholder {
