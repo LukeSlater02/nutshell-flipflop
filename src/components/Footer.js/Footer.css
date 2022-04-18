@@ -1,6 +1,8 @@
 footer {
     background-color: #080808;
     margin-top: auto;
+    position: absolute;
+    bottom: 0;
     display: flex;
     height: 5em;
     width: 100%;

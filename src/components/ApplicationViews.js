@@ -11,9 +11,6 @@ import { TaskForm } from "./tasks/TaskForm"
 import { FriendList } from "./friends/FriendsList"
 import { ArticleList } from "./articles/ArticleList"
 import { TaskDetail } from "./tasks/TaskDetail"
-
-import { TaskCard } from "./tasks/TaskCard"
-import { EventCard } from "./events/EventCard"
 import { EventDetail } from "./events/EventDetail"
 
 
