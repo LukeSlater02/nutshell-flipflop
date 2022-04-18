@@ -4,22 +4,21 @@ import { Link } from "react-router-dom";
 
 
 export const EventCard = ({ event, handleDeleteEvent }) => {
+  
   return (
-    <div className="card">
-      <div className="card-content">
+        <div className='card-content'>
+
+      <Link className="eventCard-link" to={`/events/${event.id}`}>
        
-        <h3>Name: <span className="card-name">
+        <span className="card-name">
           {event.name}
-        </span></h3>
-        <p>Breed: {event.date}</p>
-        <button type="button" onClick={() => handleDeleteevent(event.id)}>Discharge</button>
-        <Link to={`/events/${event.id}`}>
-        <button>Details</button>
-        </Link>
-        <Link to={`/events/${event.id}/edit`}>
-    <button>Edit</button>
-  </Link>
-      </div>
-    </div>
+        </span>
+        <span className='card-date'>{event.date}</span>
+        <span className='card-status'>{event.location}</span>
+    
+      </Link>
+
+        </div>
+   
   );
 }
