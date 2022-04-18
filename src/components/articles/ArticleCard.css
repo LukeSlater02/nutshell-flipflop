@@ -1,0 +1,36 @@
+.articleCard-content{
+    box-shadow: 4px 4px 4px 4px black;
+    min-width: 95%;
+    height: 3em !important;    
+    display: flex;
+    align-items: center;
+    margin: 1em;
+    width: 15em;
+    background-color: #031424;
+    border: 10px black;
+    border-radius: 5px;
+    justify-content: center;
+}
+.articleCard-container{
+    display: grid;
+    grid-template-areas: 'title synopsis';
+    grid-template-columns: 1fr 1fr;
+    min-width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+}
+
+.card-title{
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    margin: .5em;
+
+}
+.card-synopsis{
+    grid-area: synopsis;
+    display: flex;
+    align-items: center;
+    margin: .5em;
+}
