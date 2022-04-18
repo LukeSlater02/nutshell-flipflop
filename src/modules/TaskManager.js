@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:8088"
 
 export const getAllTasks = () => {
-    return fetch(`${remoteURL}/tasks`).then(res => res.json())
+    return fetch(`${remoteURL}/tasks?&_sort=deadline&_order=desc`).then(res => res.json())
     .then((parsedResponse) => {
       return parsedResponse.reverse();
     });
