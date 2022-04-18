@@ -57,6 +57,7 @@ h1 {
 .link--register a {
   color: white;
   transition: color 1s;
+  font-size: x-large;
 }
 
 .link--register {
