@@ -35,5 +35,13 @@
     grid-area: date;
 }
 .card-status{
-    grid-area: status;
+    grid-area: status; 
+}
+
+.check {
+    color: lightgreen;
+}
+
+.x {
+    color: red;
 }

@@ -1,18 +1,27 @@
 .card-content{
-    border-bottom: 1px solid lightgray;
-    min-width: 100%;
+    box-shadow: 4px 4px 4px 4px black;
+    min-width: 95%;
+    height: 3em !important;    
+    display: flex;
+    align-items: center;
+    margin: 1em;
+    width: 15em;
+    background-color: #031424;
+    border: 10px black;
+    border-radius: 5px;
+    justify-content: center;
 }
 .eventCard-link{
-    display:grid;
+    display: grid;
     grid-template-areas: 'name date status';
     grid-template-columns: 1fr 1fr 1fr;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
-    color: black
-
+    color: white;
+    justify-items: center;
 }
-.eventCard-link:hover{
+.card-link:hover{
     transform: none;
     background-color:rgb(100, 106, 153);
     font-weight: 600;

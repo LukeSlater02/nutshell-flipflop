@@ -6,11 +6,13 @@
     min-width: 25%;
     margin: auto;
     margin-top: 8%;
-    border-radius: 5px;
+    border-radius: 10px;
+    border-left: 6px #080808 solid;
+    border-right: 6px #080808 solid;
+    box-shadow: 5px 5px 5px 5px #080808;
     min-height: 400px;
-    background-color:  #031424;
+    background-color:  #30415d;
     font-size: 22px;
-    box-shadow: 5px 5px 5px 5px black;
 }
 
 .task__fields {
@@ -25,13 +27,9 @@
     padding-bottom: .3em;
     border: none;
     box-shadow: 3px 3px 3px 3px black;
-    background-color: #30415d;
-    /* border-bottom: 6px #30415d solid; */
-}
-
-label {
-    width: 240px;
-    display: contents
+    background-color: crimson;
+    border: 1px #080808 solid;
+    border-radius: 5px;
 }
 
 .task__fields ::placeholder {
@@ -46,22 +44,15 @@ input[type=text]{
     color: rgba(255, 255, 255, 1);
     outline: none;
     margin-bottom: .5em;
-    margin-left: 3em;
-    padding: 4em;
+    margin-left: 6.5em;
+    height: 1.7em !important;
+    padding:.3em;
     box-shadow: 3px 3px 3px 3px black;
 }
 
-input[type=date]{
-    resize: vertical;
-    background-color: #031424;
-    border: none;
-    color: rgba(255, 255, 255, 1);
-    outline: none;
-    margin-bottom: .5em;
-    margin-left: 1em;
-    padding:.3em;
-    font-style: italic;
-    box-shadow: 3px 3px 3px 3px black;
+label {
+    width: 240px;
+    display: contents;
 }
 
 .task__header {

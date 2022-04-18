@@ -1,6 +1,8 @@
 import React from 'react';
 import "./TaskCard.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faXmark} from '@fortawesome/free-solid-svg-icons'
 
 
 export const TaskCard = ({ task, handleDeleteTask }) => {
@@ -13,7 +15,9 @@ export const TaskCard = ({ task, handleDeleteTask }) => {
           {task.name}
         </span>
         <span className='card-date'>{task.date}</span>
-        <span className='card-status'>{task.isComplete? 'Yes': 'No'}</span>
+        <span className='card-status'>{task.isCompleted? <span className='check'><FontAwesomeIcon icon={faCheck}/></span>
+         : 
+         <span className='x'><FontAwesomeIcon icon={faXmark}/></span>}</span>
     
       </Link>
 
