@@ -16,22 +16,22 @@
     padding: 1em;
 }
 
-.article__instance {
+.card-title {
     display: flex;
     flex-direction: row;
 }
-.article__instance a {
-    color: white;
+.card-title{
+    color: crimson;
     text-decoration: underline;
     transition: color 1s;
 }
 
-.article__instance a:visited{
+.card-title:visited{
     color: darkgray;
 }
 
-.article__instance a:hover {
-    color:crimson;
+.card-title:hover {
+    color: white;
     transform: none;
 
 }
