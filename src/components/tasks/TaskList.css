@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
+    width: 60vw;
+    max-width: 60vw;
     min-width: 50%;
     margin: auto;
     margin-top: 5%;
@@ -21,6 +22,8 @@
     align-items: baseline;
     font-size: larger;
     font-weight: bold;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
     border-bottom: 6px #30415d solid;
     justify-items: center;
 }
@@ -46,6 +49,7 @@
     margin-bottom: .5em;
     border-bottom: 3px #30415d solid;
     padding-bottom: .3em;
+    align-items: center;
 }
 
 .list__item__date {

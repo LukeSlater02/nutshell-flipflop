@@ -1,7 +1,7 @@
 .articleCard-content{
     box-shadow: 4px 4px 4px 4px black;
     min-width: 95%;
-    height: 3em !important;    
+    height: 5em;    
     display: flex;
     align-items: center;
     margin: 1em;

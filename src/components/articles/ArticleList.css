@@ -3,9 +3,10 @@
     flex-direction: column;
     align-items: center;
     width: 60vw;
-    min-width: 60%;
+    min-width: 50%;
     margin: auto;
-    margin-top: 3%;
+    max-width: 60vw;
+    margin-top: 5%;
     border-radius: 10px;
     border-left: 6px black solid;
     border-right: 6px black solid;
@@ -15,38 +16,38 @@
     padding: 1em;
 }
 
-.list__fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: baseline;
-    font-size: larger;
-    font-weight: bold;
-    border-bottom: 6px #30415d solid;
-    justify-items: center;
-}
-
-.list__content {
-    width: 100%;
+.article__instance {
     display: flex;
+    flex-direction: row;
+}
+.article__instance a {
+    color: white;
+    text-decoration: underline;
+    transition: color 1s;
 }
 
- .list__field__title {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px #30415d solid;
+.article__instance a:visited{
+    color: darkgray;
 }
 
-.list__field__synopsis {
-    width: 60%;
+.article__instance a:hover {
+    color:crimson;
+    transform: none;
+
+}
+
+.list__item {
+    width: 50%;
     display: flex;
     justify-content: center;
-    border-bottom: 3px #30415d solid;
+    margin-bottom: .5em;
+    border-bottom: 3px crimson solid;
+    padding-bottom: .3em;
+    padding-left: 1em;
 }
 
 .list__header {
     font-size: 40px;
-    margin: .5em 0px 1em 0px;
 }
 
 .add__button {
@@ -65,5 +66,20 @@
 
 .add__button:hover{
     background-color: white;
-    cursor: pointer;
+    color: black;
+    cursor: pointer
+}
+
+.list__header {
+    width: 98%;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding-top: .3em;
+    margin-top: .5em;
+    margin-bottom: .7em;
+    padding-bottom: 0.3em;
+    border: none;
+    box-shadow: 3px 3px 3px 3px black;
+    background-color: crimson;
 }

@@ -28,11 +28,11 @@ export const EventDetail = () => {
     <section className="event">
       <h3 className="event__name">{event.name}</h3>
       <div className="event__date">Date: {event.date}</div>
-      <div className="event__location">Location: {event.location}</div>
+      <div className="event__location">Location: {event.location}</div><br />
       <button type="button" className="ad__button" onClick={()=>navigate(`/events/${event.id}/edit`)}>
       Edit
       </button>
-      <button type="button" disabled={isLoading} onClick={handleDelete}>
+      <button type="button"  onClick={()=>handleDelete()}>
       Delete
       </button>
     </section>
