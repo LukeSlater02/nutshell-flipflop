@@ -40,7 +40,7 @@ export const TaskList = () => {
                         <TaskCard
                         key={t.id}
                         task={t}
-                        handleDeleteTask={deleteTask} />
+                        handleDeleteTask={handleDeleteTask} />
                     
                    
 

@@ -13,7 +13,7 @@ export const TaskCard = ({ task, handleDeleteTask }) => {
           {task.name}
         </span>
         <span className='card-date'>{task.date}</span>
-        <span className='card-status'>{task.isComplete? 'Yes': 'No'}</span>
+        <span className='card-status'>{task.isCompleted === false || 0 ? "No": "Yes"}</span>
     
       </Link>
 

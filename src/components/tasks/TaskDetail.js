@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import "./TaskDetail.css";
 
 export const TaskDetail = () => {
-  const [task, setTask] = useState({name: '',detail:'',userId:'', deadline: '', isCompleted:'', completeDate:'', date: ''});
+  const [task, setTask] = useState({name: '', detail:'',userId:'', deadline: '', isCompleted:'', completeDate:'', date: ''});
   const [isLoading, setIsLoading] = useState(true);
 
   const {taskId} = useParams();
@@ -29,8 +29,8 @@ export const TaskDetail = () => {
       <h3 className="task__name">{task.name}</h3>
       <div className="task__date">Date: {task.date}</div>
       <div className="task__deadline">Deadline: {task.deadline}</div>
-      <div className="task__isCompleted">Completed: {task.isCompleted=== null ? task.completeDate : "Not Completed"}</div>
-      <div className="task__completeDate">Complete Date: {task.completeDate === null ? task.completeDate : "Not Completed"}</div>
+      <div className="task__isCompleted">Completed: {task.isCompleted=== null ? "Not Completed" : task.isCompleted}</div>
+      <div className="task__completeDate">Complete Date: {task.completeDate === null ? "Not Completed" : task.completeDate}</div>
       <div className="task__detail">Details: {task.detail}</div>
       <button type="button" className="ad__button" onClick={()=>navigate(`/tasks/${task.id}/edit`)}>
       Edit
