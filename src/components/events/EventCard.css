@@ -1,18 +1,18 @@
 .card-content{
     border-bottom: 1px solid lightgray;
     min-width: 100%;
+    
 }
-.eventCard-link{
+.card-link{
     display:grid;
     grid-template-areas: 'name date status';
     grid-template-columns: 1fr 1fr 1fr;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
-    color: black
-
+    color:white;
 }
-.eventCard-link:hover{
+.card-link:hover{
     transform: none;
     background-color:rgb(100, 106, 153);
     font-weight: 600;
@@ -20,11 +20,14 @@
 
 .card-name{
     grid-area: name;
+    color:white;
 
 }
 .card-date{
     grid-area: date;
+    color:white;
 }
 .card-status{
     grid-area: status;
+    color:white;
 }

@@ -2,6 +2,9 @@ const remoteURL = "http://localhost:8088"
 
 export const getAllEvents = () => {
     return fetch(`${remoteURL}/events`).then(res => res.json())
+    .then((parsedResponse) => {
+      return parsedResponse.reverse();
+    });
 }
 
 export const getEventById = (id) => {
