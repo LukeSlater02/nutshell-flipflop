@@ -23,3 +23,10 @@ export const addArticle = newArticle => {
       body: JSON.stringify(newArticle)
     }).then(res => res.json())
   }
+
+
+export const getUsersFavoritedArticles = (currentUser) => {
+    return fetch(`${remoteURL}/articles?userId=${currentUser.id}&_favorite=true&_sort=timestamp&_order=asc`)
+    .then(res => res.json())
+}
+

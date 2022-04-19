@@ -13,8 +13,8 @@
 }
 .articleCard-container{
     display: grid;
-    grid-template-areas: 'title synopsis';
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'title synopsis favorite';
+    grid-template-columns: 1fr 1fr 1fr;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
@@ -33,4 +33,13 @@
     display: flex;
     align-items: center;
     margin: .5em;
+}
+
+.card-favorite{
+    grid-area: favorite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5em;
+    color: gold;
 }
