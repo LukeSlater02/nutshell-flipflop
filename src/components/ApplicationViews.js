@@ -13,6 +13,7 @@ import { ArticleList } from "./articles/ArticleList"
 import { Home } from "./Dashboard/Home"
 import { TaskDetail } from "./tasks/TaskDetail"
 import { EventDetail } from "./events/EventDetail"
+import { ArticleForm } from "./articles/ArticleForm"
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   const PrivateOutlet = () => {
@@ -35,6 +36,7 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         <Route path="/events/create" element={<EventForm />} />
         <Route path="/events/:eventId/edit" element={<EventEditForm />} />
         <Route path="/articles" element={<ArticleList />} />
+        <Route path="/articles/create" element={<ArticleForm />} />
       </Route>
 
       <Route path="/login" element={<Login setAuthUser={setAuthUser}/>}/>
