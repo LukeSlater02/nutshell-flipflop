@@ -14,7 +14,7 @@
 .articleCard-container{
     display: grid;
     grid-template-areas: 'title synopsis favorite';
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
@@ -35,11 +35,17 @@
     margin: .5em;
 }
 
-.card-favorite{
+.card-favorite {
     grid-area: favorite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: .5em;
+    border: none;
+    background-color: #031424;
+    margin: auto;
     color: gold;
+}
+.card-notFavorite {
+    grid-area: favorite;
+    border: none;
+    background-color: #031424;
+    margin: auto;
+    color: black;
 }
