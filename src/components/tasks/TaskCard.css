@@ -14,7 +14,7 @@
 .card-link{
     display: grid;
     grid-template-areas: 'name date status';
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
@@ -44,4 +44,18 @@
 
 .x {
     color: red;
+}
+.card-status-done {
+    grid-area: favorite;
+    border: none;
+    background-color: #031424;
+    margin:auto;
+    color: green;
+}
+.card-status-not-done {
+    grid-area: favorite;
+    border: none;
+    background-color: #031424;
+    margin: auto;
+    color: grey;
 }
