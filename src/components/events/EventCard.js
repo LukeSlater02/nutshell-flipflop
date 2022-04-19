@@ -10,7 +10,7 @@ export const EventCard = ({ event }) => {
   return (
         <div className='card-content'>
 
-      <Link className="card-link" to={`/events/${event.id}`}>
+      <Link className="event-card-link" to={`/events/${event.id}`}>
        
         <span className="card-name">
           {event.name}
