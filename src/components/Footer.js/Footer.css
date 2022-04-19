@@ -1,0 +1,23 @@
+footer {
+    background-color: #080808;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    height: 5em;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 4px 4px 4px black;
+    font-weight: bold;
+}
+
+.team {
+    height: 76px;
+    width: 76px;
+    border: 2px #080808 solid;
+    border-radius: 15px;
+}
+
+.logo {
+    height: 100%;
+}
