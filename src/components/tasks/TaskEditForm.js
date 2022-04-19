@@ -1,19 +1,29 @@
 import React, { useState, useEffect } from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import { updateTask, getTaskById } from "../../modules/TaskManager"
+import { epochDateConverter } from "../util/epochDateConverter";
 import "./TaskEditForm.css"
 
 
 export const TaskEditForm = () => {
-    const [task, setTask] = useState({ name: "", date: "", deadline:"", isCompleted:"", completeDate:"", detail:"",});
+    const [task, setTask] = useState({ name: "", date: "", deadline:"", isCompleted:false, completeDate:"", detail:"",});
     const [isLoading, setIsLoading] = useState(false);
-  
+    console.log(task.date)
     const {taskId} = useParams();
     const navigate = useNavigate();
-  
+    const formattedDeadline = task?.deadline ? epochDateConverter(task?.deadline, 'yyy-MM-dd') : ''
+    const formattedDate = task?.date ? epochDateConverter(task?.date, 'yyy-MM-dd') : ''
+    const formattedCompleteDate = task?.completeDate ? epochDateConverter(task?.completeDate, 'yyy-MM-dd'):''
     const handleFieldChange = t => {
+        const isDate = t.target.id === 'date' || 'deadline' || 'completeDate'
+        let epochDate = ''
+          if(isDate){
+             epochDate = new Date(t.target.value).getTime()/ 1000
+       
+  
+         }
       const stateToChange = { ...task };
-      stateToChange[t.target.id] = t.target.value;
+      stateToChange[t.target.id] =  isDate? epochDate : t.target.value;
       setTask(stateToChange);
     };
   
@@ -53,14 +63,14 @@ export const TaskEditForm = () => {
                 <fieldset className="task__edit__fields">
                     <div>
                         <label htmlFor="date">Date:</label>
-                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="task date" value={task.date}/>
+                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="task date" value={formattedDate}/>
                     </div>
                 </fieldset>
 
                 <fieldset className="task__edit__fields">
                     <div>
                         <label htmlFor="deadline">Deadline:</label>
-                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control " placeholder="task deadline" value={task.deadline}/>
+                        <input type="date" id="deadline" onChange={handleFieldChange} required className="form-control " placeholder="task deadline" value={formattedDeadline}/>
                     </div>
                 </fieldset>
 
@@ -86,7 +96,7 @@ export const TaskEditForm = () => {
                 <fieldset className="task__edit__fields">
                     <div>
                         <label htmlFor="completeDate">Completion Date:</label>
-                        <input type="date" id="completeDate" onChange={handleFieldChange} required className="form-control" placeholder="task completeDate" value={task.completeDate}/>
+                        <input type="date" id="completeDate" onChange={handleFieldChange} required className="form-control" placeholder="task completeDate" value={formattedCompleteDate}/>
                     </div>
                 </fieldset>
 

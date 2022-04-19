@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { useNavigate } from "react-router-dom";
-import { addTask, getAllTasks } from "../../modules/TaskManager";
+import { addTask } from "../../modules/TaskManager";
 import "./TaskForm.css"
+import { epochDateConverter } from "../util/epochDateConverter";
 
 /*
       "id": 1,
@@ -18,20 +19,30 @@ export const TaskForm = () => {
     const [task, setTask] = useState({
         id: '',
         name: '',
-        date: '',
+        date: new Date().getTime()/1000,
         deadline: '',
         detail: '',
         isCompleted: false ,
         completeDate: 0
     })
 
+
     const [isLoading, setIsLoading] = useState(false)
 
+  const formattedDate = task?.deadline ? epochDateConverter(task.deadline, 'yyyy-MM-dd') : 'ss'
+  
     const navigate = useNavigate();
-
     const handleControlledInputChange = (t) => {
+        const isDate = t.target.id === 'deadline'
+      let epochDate = ''
+        if(t.target.id === 'deadline'){
+           epochDate = new Date(t.target.value).getTime()/ 1000
+     
+
+       }
+       console.log(t.target.value)
         const newTask = {...task}
-        let selectedVal = t.target.value;
+        let selectedVal = isDate? epochDate : t.target.value;
    
 
         newTask[t.target.id] = selectedVal;
@@ -41,31 +52,31 @@ export const TaskForm = () => {
     const handleClickSaveEvent = (t) => {
         t.preventDefault();
 
-        if(task.name !== "" && task.date !== "" && task.isCompleted !== "") {
+        if(task.name !== "" && task.date !== "" && task.isCompleted !== "" && task.deadline) {
             setIsLoading(true);
+            console.log('payload:',task)
             addTask(task)
             .then(() => navigate('/tasks'))
         } else {
                 window.alert("Complete Each Field")
         }
     }
-
     return(
         
             <form className ="task__form">
                 <h2 className ="task__header">Create New Task</h2>
 
-                <fieldset className="task__fields">
+                {/* <fieldset className="task__fields">
                     <div>
                         <label htmlFor="date">Date:</label>
                         <input type="date" id="date" onChange={handleControlledInputChange} required className="form-control" placeholder="task date" value={task.date}/>
                     </div>
-                </fieldset>
+                </fieldset> */}
 
                 <fieldset className="task__fields">
                     <div>
                         <label htmlFor="deadline">Deadline:</label>
-                        <input type="date" id="deadline" onChange={handleControlledInputChange} required className="form-control deadline " placeholder="task deadline" value={task.deadline}/>
+                        <input type="date" id="deadline" onChange={handleControlledInputChange} required className="form-control deadline " placeholder="task deadline" value={formattedDate}/>
                     </div>
                 </fieldset>
 
