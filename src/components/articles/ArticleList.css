@@ -55,7 +55,7 @@
 
 .article__list__fields {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     align-items: baseline;
     font-size: larger;
     font-weight: bold;
@@ -73,7 +73,7 @@
 }
 
 .list__header {
-    width: 98%;
+    width: 100%;
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 0.5em;
@@ -84,4 +84,8 @@
     border: none;
     box-shadow: 3px 3px 3px 3px black;
     background-color: crimson;
+}
+
+.list__field__favorite {
+    margin-left: -50px;
 }
