@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./EventDashCard.css";
+import "../Dashboard/Home.css";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark} from '@fortawesome/free-solid-svg-icons'
@@ -23,13 +23,13 @@ export const EventDashCard = () => {
   return (
 
     <>
-    <h2 className="list__header">Events</h2>
-      <div className="list__content">
+      <div className="dash__content">
+      <h2 className="dash__header">Upcoming Events</h2>
       {events.filter(event=>event.date > today).map(e =>( 
 
         <div className='card-dash-content' key={e.id}>
 
-      <Link className="card-dash-link" to={`/events/${e.id}` }>
+      <Link className="event-card-dash-link" to={`/events/${e.id}` }>
        
         <span className="card-dash-name">{e.name}</span>
        

@@ -3,16 +3,21 @@ import { TaskDashCard } from "../tasks/TaskDashCard";
 import { useNavigate } from "react-router-dom";
 import { EventDashCard } from "../events/EventDashCard";
 import { FavoritedArticles } from "../articles/FavoritedArticles";
+import "./Home.css"
 
+let userName = JSON.parse(sessionStorage.getItem("nutshell_user_name"))
+
+userName = userName.split(" ")[0]
 
 export const Home = () => {
   return(  
-  
-  <>
+  <><p className="welcome">Welcome, {userName}</p>
+  <div className="dash">
   <FavoritedArticles />
   <TaskDashCard />
   <EventDashCard />
 
+  </div>
   </>
   )
 }

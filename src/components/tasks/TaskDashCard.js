@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./TaskDashCard.css";
+import "../Dashboard/Home.css";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark} from '@fortawesome/free-solid-svg-icons'
@@ -23,8 +23,8 @@ export const TaskDashCard = () => {
   return (
 
     <>
-    <h2 className="list__header">Tasks</h2>
-      <div className="list__content">
+      <div className="dash__content">
+      <h2 className="dash__header">Upcoming Tasks</h2>
       {tasks.filter(task=>task.deadline > today).map(t =>( 
 
         <div className='card-dash-content' key={t.id}>

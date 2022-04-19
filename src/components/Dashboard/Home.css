@@ -1,0 +1,105 @@
+.dash {
+    display: grid;
+    grid-template-areas: 'articles tasks events';
+    grid-template-columns: 2fr 2fr 2fr;
+    justify-items: center;
+    margin-top: 3em;
+}
+
+.welcome {
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.dash__content {
+    display: grid;
+    justify-items: center;
+    border-left: 6px black solid;
+    border-right: 6px black solid;
+    box-shadow: 5px 5px 5px 5px black;
+    background-color: #30415d;
+    border-radius: 10px;
+    width: 23em;
+}
+
+.dash__header {
+    box-shadow: 3px 3px 3px 3px black;
+    background-color: crimson;
+    font-size: xx-large;
+    margin: .5em;
+    padding: .2em;
+    width: 90%;
+}
+
+.card-dash-content{
+    min-width: 95%;
+    height: 3em;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin: 1em;
+    background-color: #031424;
+    width: 15em;
+    border: 10px black;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 4px black;
+}
+
+.event-card-dash-link{
+    display: grid;
+    grid-template-areas: 'name status';
+    grid-template-columns: 1fr;
+    min-width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    justify-items: center;
+}
+
+.card-dash-link{
+    display: grid;
+    grid-template-areas: 'name status';
+    grid-template-columns: 1fr 1fr;
+    min-width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    justify-items: center;
+}
+.card-dash-link:hover{
+    transform: none;
+    background-color:rgb(100, 106, 153);
+    font-weight: 600;
+}
+
+.card-dash-name{
+    grid-area: name;
+
+}
+.card-dash-date{
+    grid-area: date;
+}
+.card-dash-status{
+    grid-area: status; 
+}
+
+.check {
+    color: lightgreen;
+}
+
+.x {
+    color: red;
+}
+
+.fav__list__title {
+    color: crimson;
+    text-decoration: underline;
+    transition: color 1s;
+}
+
+.fav__list__title:hover {
+    color: white;
+    transform: none;
+}
