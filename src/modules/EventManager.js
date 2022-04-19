@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:8088"
 
 export const getAllEvents = () => {
-    return fetch(`${remoteURL}/events`).then(res => res.json())
+    return fetch(`${remoteURL}/events?&_sort=date&_order=desc`).then(res => res.json())
     .then((parsedResponse) => {
       return parsedResponse.reverse();
     });

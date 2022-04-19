@@ -15,6 +15,7 @@ import { Home } from "./Dashboard/Home"
 import { TaskDetail } from "./tasks/TaskDetail"
 import { EventDetail } from "./events/EventDetail"
 
+
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   const PrivateOutlet = () => {
 		return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
