@@ -4,7 +4,6 @@ import "./ArticleForm.css"
 import { useNavigate } from "react-router-dom";
 // LUKE: accepts inputs from text field for url, title & synopsis. auto calculates date/time with AM/PM, gets userId from sessionsStorage
 
-
 export const ArticleForm = () => {
     const [article, setArticle] = useState(
         {
@@ -12,7 +11,8 @@ export const ArticleForm = () => {
             url: "",
             title: "",
             synopsis: "",
-            timestamp: ""
+            timestamp: "",
+            favorite: ""
         }
     )
 
@@ -36,7 +36,7 @@ export const ArticleForm = () => {
         article.timestamp = dateWithoutSecond.toLocaleTimeString([], { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
         article.userId = sessionStorage.getItem("nutshell_user")
 
-        if (article.url === "" || article.title === "" || article.synopsis === "") {
+        if (article.url === "" || article.title === "" || article.synopsis === "" || article.favorite === "") {
             window.alert("Please complete all fields.")
         } else {
 
