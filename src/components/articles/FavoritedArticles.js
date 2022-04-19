@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ArticleCard } from "./ArticleCard";
 import {getUsersFavoritedArticles} from "../../modules/ArticleManager";
-import "./FavoritedArticles.css";
+import "../Dashboard/Home.css";
 
 export const FavoritedArticles = () => {
     const [favArticles, setFavArticles] = useState([])
@@ -16,15 +16,15 @@ export const FavoritedArticles = () => {
 
     return (
         <div>
-            <div className="fav__article__list">
-                <h2 className="list__header">Favorite Articles</h2>
-                <div className="fav__list__content">
+            <div className="dash__content">
+                <h2 className="dash__header">Favorite Articles</h2>
                     {favArticles.map(a => (
+                        <div className="card-dash-content"> 
                         <a href={a.url} target="_blank" className="fav__list__title">{a.title}</a>
+                        </div>
                     ))}
                 </div>
             </div>
-        </div>
     )
 
 

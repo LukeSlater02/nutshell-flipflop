@@ -11,7 +11,8 @@ export const Nutshell = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("nutshell_user") !== null);
 
     const setAuthUser = (user) => {
-        sessionStorage.setItem("nutshell_user", JSON.stringify(user))
+        sessionStorage.setItem("nutshell_user", JSON.stringify(user.id))
+        sessionStorage.setItem("nutshell_user_name", JSON.stringify(user.name))
         setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
     }
     
