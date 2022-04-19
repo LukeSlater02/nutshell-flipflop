@@ -1,6 +1,5 @@
 footer {
     background-color: #080808;
-    margin-top: auto;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -12,11 +11,13 @@ footer {
     font-weight: bold;
 }
 
-footer img {
-    height: 90%;
-}
-
 .team {
+    height: 76px;
+    width: 76px;
     border: 2px #080808 solid;
     border-radius: 15px;
+}
+
+.logo {
+    height: 100%;
 }
