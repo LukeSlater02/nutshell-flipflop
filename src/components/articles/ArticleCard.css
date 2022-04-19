@@ -42,6 +42,7 @@
     margin: auto;
     transition: none;
     color: gold;
+        font-size: x-large;
 }
 .card-notFavorite {
     grid-area: favorite;
@@ -50,6 +51,7 @@
     background-color: #031424;
     margin: auto;
     color: black;
+    font-size: x-large;
 }
 
 .card-favorite:hover {

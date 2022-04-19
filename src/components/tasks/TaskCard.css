@@ -15,9 +15,8 @@
 .card-link{
     display: grid;
     grid-template-areas: 'name date status';
-
     grid-template-columns: 2fr 2fr 1fr;
-
+    align-items: center;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
@@ -55,7 +54,6 @@
     margin:auto;
     color: lightgreen;
     font-size: x-large;
-    margin-right: 5em;
 }
 .card-status-not-done {
     grid-area: favorite;
@@ -63,6 +61,7 @@
     background-color: #031424;
     margin: auto;
     color: grey;
+    font-size: x-large;
 }
 
 .card-status-done:hover {
