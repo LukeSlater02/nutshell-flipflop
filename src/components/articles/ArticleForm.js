@@ -11,7 +11,8 @@ export const ArticleForm = () => {
             url: "",
             title: "",
             synopsis: "",
-            timestamp: ""
+            timestamp: "",
+            favorite: false
         }
     )
 
