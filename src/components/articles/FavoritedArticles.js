@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-//HAVENT IMPORTED CSS YET
+import { ArticleCard } from "./ArticleCard";
 import {getUsersFavoritedArticles} from "../../modules/ArticleManager";
 
 export const FavoritedArticles = () => {
@@ -13,11 +13,11 @@ export const FavoritedArticles = () => {
 
     return (
         <div>
-            <div className="fav__article__list" key={favArticles.length}>
+            <div className="fav__article__list">
                 <h3 className="fav__list__header">Favorite Articles</h3>
                 <div className="fav__list__content">
-                    {favArticles.map(fa => (
-                        <a href={fa.url} target="_blank" className="fav__list__title">{fa.title}</a>
+                    {favArticles.map(a => (
+                        <a href={a.url} target="_blank" className="fav__list__title">{a.title}</a>
                     ))}
                 </div>
             </div>

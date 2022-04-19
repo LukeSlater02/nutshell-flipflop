@@ -10,6 +10,7 @@ import { TaskEditForm } from "./tasks/TaskEditForm";
 import { TaskForm } from "./tasks/TaskForm"
 import { FriendList } from "./friends/FriendsList"
 import { ArticleList } from "./articles/ArticleList"
+import { ArticleForm } from "./articles/ArticleForm"
 import { Home } from "./Dashboard/Home"
 import { TaskDetail } from "./tasks/TaskDetail"
 import { EventDetail } from "./events/EventDetail"
@@ -35,6 +36,7 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         <Route path="/events/create" element={<EventForm />} />
         <Route path="/events/:eventId/edit" element={<EventEditForm />} />
         <Route path="/articles" element={<ArticleList />} />
+        <Route path="/articles/create" element={<ArticleForm />} />
       </Route>
 
       <Route path="/login" element={<Login setAuthUser={setAuthUser}/>}/>

@@ -30,3 +30,13 @@ export const getUsersFavoritedArticles = (currentUser) => {
     .then(res => res.json())
 }
 
+
+export const updateArticle  = (editedArticle) => {
+  return fetch(`${remoteURL}/articles/${editedArticle.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedArticle)
+  }).then(data => data.json());
+}

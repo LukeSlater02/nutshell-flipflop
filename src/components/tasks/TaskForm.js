@@ -32,6 +32,7 @@ export const TaskForm = () => {
   const formattedDate = task?.deadline ? epochDateConverter(task.deadline, 'yyyy-MM-dd') : 'ss'
   
     const navigate = useNavigate();
+    
     const handleControlledInputChange = (t) => {
         const isDate = t.target.id === 'deadline'
       let epochDate = ''
