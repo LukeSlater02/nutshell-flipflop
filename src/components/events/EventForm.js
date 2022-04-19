@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { addEvent } from "../../modules/EventManager";
 import "./EventForm.css"
+import { epochDateConverter } from "../util/epochDateConverter";
 
 // create a form that the user can input 1) Name, 2) Date and 3) City, then Click submit. 
 //on submit, we want to use the EventManager to add new event to DB, then route to the eventList. 
@@ -16,12 +17,21 @@ export const EventForm = () => {
 
     const [isLoading, setIsLoading] = useState(false)
 
+    const formattedDate = event?.date ? epochDateConverter(event.date, 'yyyy-MM-dd') : 'ss'
+  
     const navigate = useNavigate();
-
-//set the new state anytime the user types in a value. 
     const handleControlledInputChange = (e) => {
+        const isDate = e.target.id === 'date'
+      let epochDate = ''
+        if(e.target.id === 'date'){
+           epochDate = new Date(e.target.value).getTime()/ 1000
+     
+
+       }
+       console.log(e.target.value)
         const newEvent = {...event}
-        let selectedVal = e.target.value;
+        let selectedVal = isDate? epochDate : e.target.value;
+   
 
         newEvent[e.target.id] = selectedVal;
         setEvent(newEvent);
@@ -48,7 +58,7 @@ export const EventForm = () => {
                 <fieldset className="event__fields">
                     <div>
                         <label htmlFor="date">Date:</label>
-                        <input type="date" id="date" onChange={handleControlledInputChange} required className="form-control" placeholder="event date" value={event.date}/>
+                        <input type="date" id="date" onChange={handleControlledInputChange} required className="form-control" placeholder="event date" value={formattedDate}/>
                     </div>
                 </fieldset>
 

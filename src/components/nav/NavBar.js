@@ -9,7 +9,7 @@ export const NavBar = ({clearUser}) => {
   const location = useLocation();
   return (
     <nav>
-      <ul  className="navBar">
+      <ul className="navBar">
         <li className="navBar_item">
           <Link className={`navbar__link ${location.pathname === '/' ? 'active':''}`} to="/"> <FontAwesomeIcon icon={faHouse} /> Dashboard</Link>
         </li>
