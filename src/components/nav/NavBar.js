@@ -21,9 +21,7 @@ export const NavBar = ({clearUser}) => {
         <li className="navBar_item item_left">
           <Link className={`navbar__link ${location.pathname === '/friends' ? 'active':''}`} to="/friends"> <FontAwesomeIcon icon={faUserGroup} /> Friends</Link>
         </li>
-        <li className="navBar_item item_left">
-          <Link className={`navbar__link ${location.pathname === '/messages' ? 'active':''}`} to="/messages"> <FontAwesomeIcon icon={faMessage} /> Messages</Link>
-        </li>
+    
         <li className="navBar_item item_left">
           <Link className={`navbar__link ${location.pathname === '/tasks' ? 'active':''}`} to="/tasks"> <FontAwesomeIcon icon={faClipboardCheck} /> Tasks</Link>
         </li>

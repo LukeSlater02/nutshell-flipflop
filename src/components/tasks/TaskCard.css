@@ -15,8 +15,9 @@
 .card-link{
     display: grid;
     grid-template-areas: 'name date status';
-    grid-template-columns: 2fr 2fr 1fr;
-    min-width: 100%;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    min-width: 67%;
     padding: 10px 0;
     text-decoration: none;
     color: white;
@@ -49,14 +50,34 @@
 .card-status-done {
     grid-area: favorite;
     border: none;
+    display: grid;
+    align-items: center;
+    height: 2em;
     background-color: #031424;
-    margin:auto;
-    color: green;
+    margin: auto;
+    transition: none;
+    color: lightgreen;
+    font-size: x-large;
 }
 .card-status-not-done {
     grid-area: favorite;
+    display: grid;
+    align-items: center;
+    height: 2em;
     border: none;
     background-color: #031424;
     margin: auto;
+    transition: none;
+    color: grey;
+    font-size: x-large;
+}
+
+.card-status-done:hover {
+    background-color: #031424;
+    color: lightgreen;
+}
+
+.card-status-not-done:hover {
+    background-color: #031424;
     color: grey;
 }

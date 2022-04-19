@@ -40,12 +40,26 @@
     border: none;
     background-color: #031424;
     margin: auto;
+    transition: none;
     color: gold;
+        font-size: x-large;
 }
 .card-notFavorite {
     grid-area: favorite;
     border: none;
+    transition: none;
     background-color: #031424;
     margin: auto;
+    color: black;
+    font-size: x-large;
+}
+
+.card-favorite:hover {
+    background-color: #031424;
+    color: gold;
+}
+
+.card-notFavorite:hover {
+    background-color: #031424;
     color: black;
 }

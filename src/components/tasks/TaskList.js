@@ -23,7 +23,7 @@ export const TaskList = () => {
     },[])
 
     return(
-        <>
+        <div className="list-container">
             <div className ="task__list" key={tasks.length} >
                 <h2 className="list__header">Tasks</h2>
                 <div className="list__fields">
@@ -42,13 +42,11 @@ export const TaskList = () => {
                     ))}
                 </div>
             </div>
-            
-            <button type="button"
+        <button type="button"
             className="add__button"
             onClick={() => {navigate("/tasks/create")}}>
                 Create New Task
             </button>
-
-        </>
+        </div>
     )
 }
