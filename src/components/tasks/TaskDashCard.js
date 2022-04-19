@@ -7,7 +7,7 @@ import { getAllTasks } from '../../modules/TaskManager';
 
 
 export const TaskDashCard = () => {
-  let today= new Date().getTime();
+  let today= new Date().getTime()/1000;
   
   
   const[tasks, setTasks] = useState([])
