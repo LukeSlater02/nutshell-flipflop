@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ArticleCard } from "./ArticleCard";
 import {getUsersFavoritedArticles} from "../../modules/ArticleManager";
+import "./FavoritedArticles.css";
 
 export const FavoritedArticles = () => {
     const [favArticles, setFavArticles] = useState([])
@@ -11,10 +12,12 @@ export const FavoritedArticles = () => {
         getUsersFavoritedArticles(currentUser).then(setFavArticles)
     }, [])
 
+    console.log(favArticles)
+
     return (
         <div>
             <div className="fav__article__list">
-                <h3 className="fav__list__header">Favorite Articles</h3>
+                <h2 className="list__header">Favorite Articles</h2>
                 <div className="fav__list__content">
                     {favArticles.map(a => (
                         <a href={a.url} target="_blank" className="fav__list__title">{a.title}</a>

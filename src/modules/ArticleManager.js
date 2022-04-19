@@ -26,7 +26,7 @@ export const addArticle = newArticle => {
 
 
 export const getUsersFavoritedArticles = (currentUser) => {
-    return fetch(`${remoteURL}/articles?userId=${currentUser.id}&_favorite=true&_sort=timestamp&_order=asc`)
+    return fetch(`${remoteURL}/articles?favorite=true&userId=${currentUser}&_sort=timestamp&_order=desc`)
     .then(res => res.json())
 }
 
