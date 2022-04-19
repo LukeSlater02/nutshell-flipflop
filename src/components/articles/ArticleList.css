@@ -33,17 +33,6 @@
 .card-title:hover {
     color: white;
     transform: none;
-
-}
-
-.list__item {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: .5em;
-    border-bottom: 3px crimson solid;
-    padding-bottom: .3em;
-    padding-left: 1em;
 }
 
 .list__header {
@@ -66,7 +55,7 @@
 
 .article__list__fields {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: baseline;
     font-size: larger;
     font-weight: bold;

@@ -9,9 +9,9 @@ export const NavBar = ({clearUser}) => {
   const location = useLocation();
   return (
     <nav>
-      <ul  className="navBar">
+      <ul className="navBar">
         <li className="navBar_item">
-          <Link className={`navbar__link ${location.pathname === '/' ? 'active':''}`} to="/"> <FontAwesomeIcon icon={faHouse} /> Dashboard</Link>
+          <Link className={`navbar__link ${location.pathname === '/home' ? 'active':''}`} to="/"> <FontAwesomeIcon icon={faHouse} /> Dashboard</Link>
         </li>
         <li className="navBar_item item_left">
           <Link className={`navbar__link ${location.pathname === '/articles' ? 'active':''}`} to="/articles"> <FontAwesomeIcon icon={faNewspaper} /> Articles</Link>

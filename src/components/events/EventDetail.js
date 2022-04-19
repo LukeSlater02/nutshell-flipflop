@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { getEventById, deleteEvent } from "../../modules/EventManager";
 import { useParams, useNavigate } from "react-router-dom"
 import "./EventDetail.css";
+import { epochDateConverter } from "../util/epochDateConverter";
 
 export const EventDetail = () => {
   const [event, setEvent] = useState({name: '', date: '', location: ''});
   const [isLoading, setIsLoading] = useState(true);
-
+  const formattedDate = event?.date && epochDateConverter(event.date, 'MM/dd/yyy')
   const {eventId} = useParams();
   const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ export const EventDetail = () => {
   return (
     <section className="event">
       <h3 className="event__name">{event.name}</h3>
-      <div className="event__date">Date: {event.date}</div>
+      <div className="event__date">Date: {formattedDate}</div>
       <div className="event__location">Location: {event.location}</div><br />
       <button type="button" className="ad__button" onClick={()=>navigate(`/events/${event.id}/edit`)}>
       Edit

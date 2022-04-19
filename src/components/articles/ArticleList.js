@@ -20,7 +20,8 @@ export const ArticleList = () => {
                 <h2 className="list__header">Article List</h2>
                 <div className="article__list__fields">
                     <span className="list__field__title">Title</span>
-                        <span className="list__field__synopsis">Synopsis</span>
+                    <span className="list__field__synopsis">Synopsis</span>
+                    <span className="list__field__favorite">Favorite?</span>
                 </div>
                 <div className="list__content">
                     {articles.map(a => (
