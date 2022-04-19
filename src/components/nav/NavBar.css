@@ -5,6 +5,7 @@
     align-items: center;
     padding: 1em;
     transition: color .5s;
+    font-weight: bold;
 }
 
 

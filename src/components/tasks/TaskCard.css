@@ -53,12 +53,24 @@
     border: none;
     background-color: #031424;
     margin:auto;
-    color: green;
+    color: lightgreen;
+    font-size: x-large;
+    margin-right: 5em;
 }
 .card-status-not-done {
     grid-area: favorite;
     border: none;
     background-color: #031424;
     margin: auto;
+    color: grey;
+}
+
+.card-status-done:hover {
+    background-color: #031424;
+    color: lightgreen;
+}
+
+.card-status-not-done:hover {
+    background-color: #031424;
     color: grey;
 }
