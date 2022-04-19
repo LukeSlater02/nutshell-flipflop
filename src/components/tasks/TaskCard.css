@@ -10,11 +10,12 @@
     border: 10px black;
     border-radius: 5px;
     justify-content: center;
+    align-items: center;
 }
 .card-link{
     display: grid;
     grid-template-areas: 'name date status';
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 1.3fr;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
