@@ -14,7 +14,7 @@
 .articleCard-container{
     display: grid;
     grid-template-areas: 'title synopsis favorite';
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;

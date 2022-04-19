@@ -15,6 +15,7 @@ export const ArticleList = () => {
         getAllArticles().then(setArticles);
     }, [])
     return (
+
         <div>
             <div className="article__list" key={articles.length}>
                 <h2 className="list__header">Article List</h2>

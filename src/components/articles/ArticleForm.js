@@ -11,8 +11,7 @@ export const ArticleForm = () => {
             url: "",
             title: "",
             synopsis: "",
-            timestamp: "",
-            favorite: ""
+            timestamp: ""
         }
     )
 
@@ -36,7 +35,7 @@ export const ArticleForm = () => {
         article.timestamp = dateWithoutSecond.toLocaleTimeString([], { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
         article.userId = sessionStorage.getItem("nutshell_user")
 
-        if (article.url === "" || article.title === "" || article.synopsis === "" || article.favorite === "") {
+        if (article.url === "" || article.title === "" || article.synopsis === "") {
             window.alert("Please complete all fields.")
         } else {
 
@@ -63,7 +62,7 @@ export const ArticleForm = () => {
                 <fieldset className="article__fields">
                     <div>
                         <label htmlFor="title">Title:</label>
-                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control name" placeholder="article title" value={article.title} />
+                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control title" placeholder="article title" value={article.title} />
                     </div>
                 </fieldset>
 
@@ -71,7 +70,7 @@ export const ArticleForm = () => {
                 <fieldset className="article__fields">
                     <div>
                         <label htmlFor="synopsis">Synopsis:</label>
-                        <input type="text" id="synopsis" onChange={handleControlledInputChange} required className="form-control location" placeholder="article synopsis" value={article.synopsis} />
+                        <input type="text" id="synopsis" onChange={handleControlledInputChange} required className="form-control synopsis" placeholder="article synopsis" value={article.synopsis} />
                     </div>
                 </fieldset>
 
