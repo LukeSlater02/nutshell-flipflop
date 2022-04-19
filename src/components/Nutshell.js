@@ -12,7 +12,7 @@ export const Nutshell = () => {
 
     const setAuthUser = (user) => {
         sessionStorage.setItem("nutshell_user", JSON.stringify(user.id))
-        sessionStorage.setItem("nutshell_user_name", JSON.stringify(user.name))
+        sessionStorage.setItem("nutshell_user_name", JSON.stringify(user.firstName))
         setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
     }
     
