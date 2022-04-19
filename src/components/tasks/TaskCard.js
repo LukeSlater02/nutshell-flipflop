@@ -19,7 +19,7 @@ export const TaskCard = ({ task, handleDeleteTask }) => {
     if(task.completeDate === 0){
       task.completeDate = new Date().getTime()/1000
     }
-    if(task.isCompleted === false && task.completeDate == 1){
+    if(task.isCompleted === false && task.completeDate !== 0){
       task.completeDate = 0
     }
     updateTask(task)

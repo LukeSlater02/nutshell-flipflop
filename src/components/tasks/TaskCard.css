@@ -15,9 +15,7 @@
 .card-link{
     display: grid;
     grid-template-areas: 'name date status';
-
     grid-template-columns: 2fr 2fr 1fr;
-
     min-width: 100%;
     padding: 10px 0;
     text-decoration: none;
