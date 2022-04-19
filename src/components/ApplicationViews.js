@@ -10,6 +10,7 @@ import { TaskEditForm } from "./tasks/TaskEditForm";
 import { TaskForm } from "./tasks/TaskForm"
 import { FriendList } from "./friends/FriendsList"
 import { ArticleList } from "./articles/ArticleList"
+import { ArticleForm } from "./articles/ArticleForm"
 import { Home } from "./Dashboard/Home"
 import { TaskDetail } from "./tasks/TaskDetail"
 import { EventDetail } from "./events/EventDetail"

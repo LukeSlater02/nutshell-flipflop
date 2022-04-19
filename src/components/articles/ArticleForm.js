@@ -4,7 +4,6 @@ import "./ArticleForm.css"
 import { useNavigate } from "react-router-dom";
 // LUKE: accepts inputs from text field for url, title & synopsis. auto calculates date/time with AM/PM, gets userId from sessionsStorage
 
-
 export const ArticleForm = () => {
     const [article, setArticle] = useState(
         {
@@ -64,7 +63,7 @@ export const ArticleForm = () => {
                 <fieldset className="article__fields">
                     <div>
                         <label htmlFor="title">Title:</label>
-                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control name" placeholder="article title" value={article.title} />
+                        <input type="text" id="title" onChange={handleControlledInputChange} required className="form-control title" placeholder="article title" value={article.title} />
                     </div>
                 </fieldset>
 
@@ -72,7 +71,7 @@ export const ArticleForm = () => {
                 <fieldset className="article__fields">
                     <div>
                         <label htmlFor="synopsis">Synopsis:</label>
-                        <input type="text" id="synopsis" onChange={handleControlledInputChange} required className="form-control location" placeholder="article synopsis" value={article.synopsis} />
+                        <input type="text" id="synopsis" onChange={handleControlledInputChange} required className="form-control synopsis" placeholder="article synopsis" value={article.synopsis} />
                     </div>
                 </fieldset>
 
