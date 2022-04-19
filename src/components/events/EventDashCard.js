@@ -27,7 +27,7 @@ export const EventDashCard = () => {
       <div className="list__content">
       {events.filter(event=>event.date > today).map(e =>( 
 
-        <div className='card-dash-content'>
+        <div className='card-dash-content' key={e.id}>
 
       <Link className="card-dash-link" to={`/events/${e.id}` }>
        

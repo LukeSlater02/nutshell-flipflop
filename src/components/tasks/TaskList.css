@@ -18,7 +18,7 @@
 
 .list__fields {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     align-items: baseline;
     font-size: larger;
     font-weight: bold;
@@ -27,6 +27,18 @@
     border-bottom: 6px #30415d solid;
     justify-items: center;
 }
+.list__field.deadlineHeader{
+    margin-left: -35px;
+}
+.list__field.taskHeader{
+    margin-left: -25px;
+}
+.list__field.statusHeader{
+    margin-left: -40px;
+}
+/* button.card-status-done{
+    margin-left: -20px;
+} */
 
 
 .list__content {

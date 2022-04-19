@@ -27,7 +27,7 @@ export const TaskDashCard = () => {
       <div className="list__content">
       {tasks.filter(task=>task.deadline > today).map(t =>( 
 
-        <div className='card-dash-content'>
+        <div className='card-dash-content' key={t.id}>
 
       <Link className="card-dash-link" to={`/tasks/${t.id}` }>
        
