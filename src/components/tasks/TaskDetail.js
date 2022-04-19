@@ -33,7 +33,7 @@ export const TaskDetail = () => {
       <h3 className="task__name">{task.name}</h3>
       <div className="task__date">Date: {formattedDate}</div>
       <div className="task__deadline">Deadline: {formattedDeadline}</div>
-      <div className="task__isCompleted">Completed: {task.isCompleted=== null ? "Not Completed" : task.isCompleted}</div>
+      <div className="task__isCompleted">Completed: {task.isCompleted=== false ? "Not Completed" : task.isCompleted}</div>
       <div className="task__completeDate">Complete Date: {task.completeDate === 0 ? "Not Completed" : task.completeDate}</div>
       <div className="task__detail">Details: {task.detail}</div><br />
       <button type="button" className="ad__button" onClick={()=>navigate(`/tasks/${task.id}/edit`)}>

@@ -34,35 +34,11 @@ export const TaskList = () => {
                 <div className="list__content">
                     {tasks.map(t => (
 
-
-                    
-
                         <TaskCard
                         key={t.id}
                         task={t}
                         handleDeleteTask={handleDeleteTask} />
                     
-                   
-
-
-                         
-                        // <span key={t.id}>
-                        //     <span className="list__item__name">{t.name}</span>
-                        //     <span className="list__item__date">{t.date}</span> 
-                        //     <span className="list__item">{t.isCompleted ? 'Yes' : 'No'}</span>
-
-                        //     <button type="button"
-                        //     className="ad__button"
-                        //     onClick={()=>navigate(`/tasks/${t.id}/edit`)}>
-                        //         Edit
-                        //     </button>
-                        //     <button type="button"
-                        //     className="ad__button"
-                        //     onClick={()=>handleDeleteTask(t.id)}>
-                        //         Delete
-                        //     </button>
-                        //     </span>
-                        
                     ))}
                 </div>
             </div>
