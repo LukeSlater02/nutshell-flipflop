@@ -51,7 +51,7 @@ export const EventEditForm = () => {
                 <fieldset className="event__edit__fields">
                     <div>
                         <label htmlFor="date">Date:</label>
-                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={event.formattedDate}/>
+                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={formattedDate}/>
                     </div>
                 </fieldset>
 
