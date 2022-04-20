@@ -33,6 +33,7 @@
     margin: .5em;
     padding: .2em;
     width: 90%;
+    border-radius: 5px;
 }
 
 .card-dash-content{
@@ -113,7 +114,7 @@
 
 .fav__list__title {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
     transition: color 1s;
 }
 
@@ -121,3 +122,4 @@
     color: white;
     transform: none;
 }
+
