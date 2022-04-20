@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import { updateEvent, getEventById } from "../../modules/EventManager"
 import "./EventEditForm.css"
+import { epochDateConverter } from "../util/epochDateConverter";
 
 
 export const EventEditForm = () => {
     const [event, setEvent] = useState({ name: "", date: "", location: "" });
     const [isLoading, setIsLoading] = useState(false);
-  
+    const formattedDate = event?.date ? epochDateConverter(event?.date, 'yyy-MM-dd') : ''
+
     const {eventId} = useParams();
     const navigate = useNavigate();
   
@@ -49,7 +51,7 @@ export const EventEditForm = () => {
                 <fieldset className="event__edit__fields">
                     <div>
                         <label htmlFor="date">Date:</label>
-                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={event.date}/>
+                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={formattedDate}/>
                     </div>
                 </fieldset>
 

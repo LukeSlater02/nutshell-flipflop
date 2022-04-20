@@ -17,14 +17,14 @@ export const EventForm = () => {
 
     const [isLoading, setIsLoading] = useState(false)
 
-    const formattedDate = event?.date ? epochDateConverter(event.date, 'yyyy-MM-dd') : 'ss'
+    const formattedDate = event?.date ? epochDateConverter(event.date, 'yyy-MM-dd') : 'ss'
   
     const navigate = useNavigate();
     const handleControlledInputChange = (e) => {
         const isDate = e.target.id === 'date'
       let epochDate = ''
         if(e.target.id === 'date'){
-           epochDate = new Date(e.target.value).getTime()/ 1000
+           epochDate = new Date(e.target.value).getTime()/1000
      
 
        }
