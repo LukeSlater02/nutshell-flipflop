@@ -40,6 +40,16 @@ body {
   margin-top: 8em;
 }
 
+input[type=email]{
+  resize: vertical;
+  background-color: #031424;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+  padding: 0.3em;
+  box-shadow: 3px 3px 3px 3px black;
+}
+
 .list-container {
   margin: 0;
   padding: 0;
