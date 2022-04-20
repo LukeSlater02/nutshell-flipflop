@@ -13,6 +13,29 @@ body {
   padding-bottom: 5em;
 }
 
+.event {
+  border-radius: 10px;
+  border-left: 6px black solid;
+  border-right: 6px black solid;
+  box-shadow: 5px 5px 5px 5px black;
+  background-color: #30415d;
+  width: 30%;
+  margin-left: 2;
+  font-size: 18px;
+  padding: 1em;
+}
+
+.task {
+  width: 20%;
+  border-radius: 10px;
+  border-left: 6px black solid;
+  border-right: 6px black solid;
+  box-shadow: 5px 5px 5px 5px black;
+  background-color: #30415d;
+  font-size: 18px;
+  padding: 1em;
+}
+
 .list-container {
   margin: 0;
   padding: 0;
