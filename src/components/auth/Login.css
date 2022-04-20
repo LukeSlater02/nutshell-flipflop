@@ -71,6 +71,7 @@ h1 {
 fieldset {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: none;
 }
 
@@ -93,4 +94,13 @@ button:hover{
   background-color: white;
   color: black;
   cursor: pointer
+}
+
+.mb-3{
+  font-size: 48px;
+  top: -35%;
+}
+label{
+  
+  font-size: 20px;
 }

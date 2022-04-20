@@ -24,6 +24,8 @@
     width: 23em;
 }
 
+
+
 .dash__header {
     box-shadow: 3px 3px 3px 3px black;
     background-color: crimson;
@@ -31,6 +33,7 @@
     margin: .5em;
     padding: .2em;
     width: 90%;
+    border-radius: 5px;
 }
 
 .card-dash-content{
@@ -47,6 +50,13 @@
     box-shadow: 4px 4px 4px 4px black;
 }
 
+.card-dash-content:hover{
+    transform: none;
+    background-color:rgb(100, 106, 153);
+    font-weight: 600;
+    border-radius: 5px;
+}
+
 .event-card-dash-link{
     display: grid;
     grid-template-areas: 'name status';
@@ -56,6 +66,13 @@
     text-decoration: none;
     color: white;
     justify-items: center;
+}
+
+.event-card-dash-link:hover{
+    transform: none;
+    background-color:rgb(100, 106, 153);
+    font-weight: 600;
+    border-radius: 5px;
 }
 
 .card-dash-link{
@@ -72,6 +89,8 @@
     transform: none;
     background-color:rgb(100, 106, 153);
     font-weight: 600;
+    border-radius: 5px;
+    color:white;
 }
 
 .card-dash-name{
@@ -94,8 +113,8 @@
 }
 
 .fav__list__title {
-    color: crimson;
-    text-decoration: underline;
+    color: white;
+    text-decoration: none;
     transition: color 1s;
 }
 
@@ -103,3 +122,4 @@
     color: white;
     transform: none;
 }
+
