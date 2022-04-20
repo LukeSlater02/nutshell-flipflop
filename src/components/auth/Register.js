@@ -39,8 +39,7 @@ export const Register = () => {
 					},
 					body: JSON.stringify({
 						email: registerUser.email,
-						firstName: registerUser.firstName ,
-						lastName: registerUser.lastName
+						name: `${registerUser.firstName} ${registerUser.lastName}`,
 					}),
 				})
 					.then((res) => res.json())
@@ -48,7 +47,6 @@ export const Register = () => {
 						if (createdUser.hasOwnProperty("id")) {
 							// The user id is saved under the key nutshell_user in session Storage. Change below if needed!
 							sessionStorage.setItem("nutshell_user", createdUser.id);
-							sessionStorage.setItem("nutshell_user_name", createdUser.name)
 							navigate("/");
 						}
 					});
@@ -72,7 +70,7 @@ export const Register = () => {
 
 			<form className="form--login" onSubmit={handleRegister}>
 				<h1 className="h3 mb-3 font-weight-normal">
-					Please Register for Application Name
+					Register
 				</h1>
 				<fieldset>
 					<label htmlFor="firstName"> First Name </label>
