@@ -26,16 +26,20 @@ export const EventDetail = () => {
      
   }, [eventId]);
   return (
+    <div className="detailsContainer">
     <section className="event">
-      <h3 className="event__name">{event.name}</h3>
-      <div className="event__date">Date: {formattedDate}</div>
-      <div className="event__location">Location: {event.location}</div><br />
+      <h2>{event.name}</h2>
+      <div className="event__date"><span className="detailsLabel">Date: </span>{formattedDate}</div>
+      <div className="event__location"><span className="detailsLabel">Location: </span>{event.location}</div><br />
+      <div className="detailsContainer">
       <button type="button" className="ad__button" onClick={()=>navigate(`/events/${event.id}/edit`)}>
       Edit
       </button>
       <button type="button"  onClick={()=>handleDelete()}>
       Delete
       </button>
+      </div>
     </section>
+    </div>
   );
 };

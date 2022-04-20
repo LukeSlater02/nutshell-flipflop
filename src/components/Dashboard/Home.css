@@ -1,9 +1,14 @@
 .dash {
-    display: grid;
-    grid-template-areas: 'articles tasks events';
-    grid-template-columns: 2fr 2fr 2fr;
+    display: flex;
+    /* display: grid; */
+    /* grid-template-areas: 'articles tasks events'; */
+    /* grid-template-columns: 2fr 2fr 2fr; */
     justify-items: center;
     margin-top: 3em;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
 .welcome {

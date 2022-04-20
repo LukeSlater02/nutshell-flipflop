@@ -8,18 +8,27 @@ import { epochDateConverter } from "../util/epochDateConverter";
 export const EventEditForm = () => {
     const [event, setEvent] = useState({ name: "", date: "", location: "" });
     const [isLoading, setIsLoading] = useState(false);
+    const formattedDate = event?.date ? epochDateConverter(event?.date, 'yyy-MM-dd') : ''
   
     const {eventId} = useParams();
     const navigate = useNavigate();
-    const formattedDate = event?.date ? epochDateConverter(event?.date, 'yyy-MM-dd') : ''
     const handleFieldChange = e => {
-      const stateToChange = { ...event };
-      stateToChange[e.target.id] = e.target.value;
-      setEvent(stateToChange);
-    };
+      const isDate = e.target.id === 'date'
+      let epochDate = ''
+        if(isDate){
+           epochDate = new Date(e.target.value).getTime()/ 1000
+     
+
+       }
+    const stateToChange = { ...event };
+    stateToChange[e.target.id] =  isDate? epochDate : e.target.value;
+    setEvent(stateToChange);
+  };
+
+    
   
     const updateExistingEvent = e => {
-        e.preventDefault()
+        // e.preventDefault()
         setIsLoading(true);
 
         const editedEvent = {
