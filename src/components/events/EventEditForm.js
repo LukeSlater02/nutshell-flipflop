@@ -12,15 +12,23 @@ export const EventEditForm = () => {
   
     const {eventId} = useParams();
     const navigate = useNavigate();
-  
     const handleFieldChange = e => {
-      const stateToChange = { ...event };
-      stateToChange[e.target.id] = e.target.value;
-      setEvent(stateToChange);
-    };
+      const isDate = e.target.id === 'date'
+      let epochDate = ''
+        if(isDate){
+           epochDate = new Date(e.target.value).getTime()/ 1000
+     
+
+       }
+    const stateToChange = { ...event };
+    stateToChange[e.target.id] =  isDate? epochDate : e.target.value;
+    setEvent(stateToChange);
+  };
+
+    
   
     const updateExistingEvent = e => {
-        e.preventDefault()
+        // e.preventDefault()
         setIsLoading(true);
 
         const editedEvent = {
@@ -51,7 +59,7 @@ export const EventEditForm = () => {
                 <fieldset className="event__edit__fields">
                     <div>
                         <label htmlFor="date">Date:</label>
-                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={event.formattedDate}/>
+                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={formattedDate}/>
                     </div>
                 </fieldset>
 
