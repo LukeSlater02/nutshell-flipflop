@@ -23,6 +23,8 @@ body {
   margin-left: 2;
   font-size: 18px;
   padding: 1em;
+  width: 15em;
+  margin-top: 8em;
 }
 
 .task {
@@ -34,6 +36,18 @@ body {
   background-color: #30415d;
   font-size: 18px;
   padding: 1em;
+  width: 15em;
+  margin-top: 8em;
+}
+
+input[type=email]{
+  resize: vertical;
+  background-color: #031424;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+  padding: 0.3em;
+  box-shadow: 3px 3px 3px 3px black;
 }
 
 .list-container {
@@ -48,8 +62,19 @@ body {
   align-content: center;
 }
 
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+}
+
 
 h1, h2, h3, h4, h5 {
+  font-family: 'Prata';
+}
+
+.detailsLabel {
+  font-size: 20px;
+  font-weight: bold;
   font-family: 'Prata';
 }
 

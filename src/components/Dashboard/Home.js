@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { TaskDashCard } from "../tasks/TaskDashCard";
-import { useLocation } from "react-router-dom";
 import { EventDashCard } from "../events/EventDashCard";
 import { FavoritedArticles } from "../articles/FavoritedArticles";
 import "./Home.css"

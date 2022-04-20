@@ -9,7 +9,7 @@ export const EventEditForm = () => {
     const [event, setEvent] = useState({ name: "", date: "", location: "" });
     const [isLoading, setIsLoading] = useState(false);
     const formattedDate = event?.date ? epochDateConverter(event?.date, 'yyy-MM-dd') : ''
-
+  
     const {eventId} = useParams();
     const navigate = useNavigate();
   
@@ -51,7 +51,7 @@ export const EventEditForm = () => {
                 <fieldset className="event__edit__fields">
                     <div>
                         <label htmlFor="date">Date:</label>
-                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={formattedDate}/>
+                        <input type="date" id="date" onChange={handleFieldChange} required className="form-control" placeholder="event date" value={event.formattedDate}/>
                     </div>
                 </fieldset>
 
